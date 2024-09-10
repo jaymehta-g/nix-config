@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.05";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs }@inputs:
   let
     system = "x86_64-linux";
 
@@ -17,8 +17,8 @@
     };
   in {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; };
+      laptop-vm = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit system inputs; };
 
         modules = [
           ./nixos/configuration.nix
