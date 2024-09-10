@@ -106,8 +106,7 @@
     "openssl-1.1.1w"
   ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Instal packages globally
   environment.systemPackages = with pkgs; [
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.kdialog
