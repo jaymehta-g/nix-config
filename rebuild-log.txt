@@ -1,7 +1,9 @@
 warning: Git tree '/etc/nixos' is dirty
-building the system configuration...
-warning: Git tree '/etc/nixos' is dirty
-activating the configuration...
-setting up /etc...
-reloading user units for jay...
-restarting sysinit-reactivation.target
+error: undefined variable 'nixpkgs-unstable'
+
+       at /nix/store/69aflmq0rvdp5agsp7cs4chclzvh1hb7-source/flake.nix:17:28:
+
+           16|     };
+           17|     pkgs-unstable = import nixpkgs-unstable {
+             |                            ^
+           18|       inherit system;
