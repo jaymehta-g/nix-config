@@ -111,7 +111,7 @@
     vscode
     home-manager
     dracula-theme
-    python3
+    unstable.python3
     cargo
   ];
 
