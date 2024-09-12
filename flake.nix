@@ -6,7 +6,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable }:
+  outputs = { self, nixpkgs, nixpkgs-unstable }@inputs:
   let
     system = "x86_64-linux";
 
@@ -14,14 +14,14 @@
       inherit system;
       config.allowUnfree = true;
     };
-    pkgs-unstable = import nixpkgs-unstable {
+    unstable = import nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;
     };
   in {
     nixosConfigurations = {
-      laptop-vm = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system pkgs pkgs-unstable; };
+      laptop-vm = nixpkgs.lib.nixosSystem rec {
+        specialArgs = { inherit system pkgs unstable; };
 
         modules = [
           ./nixos/configuration.nix
