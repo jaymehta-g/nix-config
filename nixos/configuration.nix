@@ -109,6 +109,7 @@
     dracula-theme
     unstable.python3
     cargo
+    unstable.magic-wormhole
   ];
 
   # This value determines the NixOS release from which the default
