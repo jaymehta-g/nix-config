@@ -102,6 +102,7 @@
     kdePackages.kdialog
     git
     gitg
+    gh
     wget
     vscode
     home-manager
