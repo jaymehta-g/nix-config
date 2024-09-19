@@ -120,8 +120,6 @@
     signal-desktop
     stow
     discord
-    bottles-unwrapped
-    libunwind # game dependency
   ];
 
   # This value determines the NixOS release from which the default
