@@ -20,7 +20,7 @@
     };
   in {
     nixosConfigurations = {
-      laptop-vm = nixpkgs.lib.nixosSystem rec {
+      desktop = nixpkgs.lib.nixosSystem rec {
         specialArgs = { inherit system pkgs unstable; };
 
         modules = [

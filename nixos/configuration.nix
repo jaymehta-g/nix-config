@@ -17,7 +17,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "laptop-vm"; # Define your hostname.
+  networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -58,6 +58,10 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -81,10 +85,6 @@
     #  thunderbird
     ];
   };
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "jay";
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -110,6 +110,11 @@
     unstable.python3
     cargo
     unstable.magic-wormhole
+    protonvpn-gui
+    signal-desktop
+    stow
+    discord
+    bottles-unwrapped
   ];
 
   # This value determines the NixOS release from which the default

@@ -7,7 +7,9 @@ git diff -U0
 
 echo "Now rebuilding..."
 
-sudo nixos-rebuild switch &> ./rebuild-log.txt || (cat ./rebuild-log.txt | grep --color error && false)
+logfile=/tmp/nixos-rebuild-log-$(date +"%H:%I:%M:%S").txt
+
+sudo nixos-rebuild switch | tee $logfile || (cat $logfile | grep --color error && false)
 
 echo "Rebuild success!"
 
