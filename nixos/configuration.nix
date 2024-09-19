@@ -96,6 +96,12 @@
     "openssl-1.1.1w"
   ];
 
+  # Allow running executables
+
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = [];
+
   # Install packages globally
   environment.systemPackages = with pkgs; [
     libsForQt5.qtstyleplugin-kvantum
@@ -115,6 +121,7 @@
     stow
     discord
     bottles-unwrapped
+    libunwind # game dependency
   ];
 
   # This value determines the NixOS release from which the default
