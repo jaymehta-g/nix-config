@@ -120,6 +120,7 @@
     signal-desktop
     stow
     discord
+    sublime4
   ];
 
   # This value determines the NixOS release from which the default
