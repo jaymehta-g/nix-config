@@ -120,6 +120,7 @@
     signal-desktop
     stow
     discord
+    google-chrome
   ];
 
   # This value determines the NixOS release from which the default
