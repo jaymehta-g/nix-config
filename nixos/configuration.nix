@@ -101,7 +101,6 @@
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = [];
-  nixpkgs.nonexistent = 123;
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
@@ -121,7 +120,6 @@
     signal-desktop
     stow
     discord
-    sublime4
   ];
 
   # This value determines the NixOS release from which the default

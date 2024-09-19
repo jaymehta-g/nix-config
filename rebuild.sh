@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e # Exit on error
 
 pushd /etc/nixos
 
@@ -7,11 +6,17 @@ git diff -U0
 
 echo "Now rebuilding..."
 
-logfile=/tmp/nixos-rebuild-log-$(date +"%H:%I:%M:%S").txt
+sudo nixos-rebuild switch
 
-sudo nixos-rebuild switch | tee $logfile || (cat $logfile | grep --color error && false)
+if [ $? -ne 0 ]; then
+    echo "Nixos Rebuilt Unsuccessful, see above"
+    read
+    exit 1
+fi
 
 echo "Rebuild success!"
+
+set -e # Exit on error
 
 current=$(nixos-rebuild list-generations | grep current)
 
