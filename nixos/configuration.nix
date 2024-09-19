@@ -101,6 +101,7 @@
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = [];
+  nixpkgs.nonexistent = 123;
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
