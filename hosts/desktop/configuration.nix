@@ -92,10 +92,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1u"
-  ];
-
   # Allow running executables
 
   programs.nix-ld.enable = true;
@@ -122,6 +118,9 @@
   ];
 
   gaming.enable = true;
+
+  # this doesnt work cause of some weird stuff
+#   sublime-text.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
