@@ -24,7 +24,7 @@
         specialArgs = { inherit system pkgs unstable; };
 
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/desktop/configuration.nix
         ];
       };
     };
