@@ -118,6 +118,7 @@
   ];
 
   gaming.enable = true;
+  gaming.minecraft.enable = true;
 
   # this doesnt work cause of some weird stuff
 #   sublime-text.enable = true;
