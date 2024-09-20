@@ -2,7 +2,7 @@
 {
     options = {
         MODULENAME.enable =
-            lib.mkEnableOption "enables"
+            lib.mkEnableOption "enables";
     };
 
     config = lib.mkIf config.MODULENAME.enable {
