@@ -10,7 +10,7 @@
     config = lib.mkIf config.gaming.enable {
         environment.systemPackages = with pkgs; [
             bottles
-        ] ++ (if config.gaming.minecraft.enable then [] else [prismlauncher]);
+        ] ++ (if !config.gaming.minecraft.enable then [] else [prismlauncher]);
 
         programs.nix-ld.enable = true;
 
