@@ -1,0 +1,11 @@
+{pkgs, lib, config, ...}:
+{
+    options = {
+        MODULENAME.enable =
+            lib.mkEnableOption "enables"
+    };
+
+    config = lib.mkIf config.MODULENAME.enable {
+        key = "value";
+    };
+}

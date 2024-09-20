@@ -18,6 +18,8 @@
       inherit system;
       config.allowUnfree = true;
     };
+
+    custom-modules = ./mods/default.nix;
   in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem rec {
@@ -25,6 +27,7 @@
 
         modules = [
           ./hosts/desktop/configuration.nix
+          custom-modules
         ];
       };
     };
