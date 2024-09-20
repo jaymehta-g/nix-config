@@ -2,7 +2,7 @@
 
 pushd /etc/nixos
 
-git diff -U0
+git diff -U0 HEAD
 
 echo "Now rebuilding..."
 
@@ -15,8 +15,6 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Rebuild success!"
-
-set -e # Exit on error
 
 current=$(nixos-rebuild list-generations | grep current)
 
