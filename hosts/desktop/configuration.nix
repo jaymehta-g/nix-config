@@ -112,6 +112,7 @@
     protonvpn-gui
     signal-desktop
     discord
+    vlc
   ];
 
   gaming.enable = true;
