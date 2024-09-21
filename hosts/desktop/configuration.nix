@@ -114,6 +114,7 @@
     discord
     vlc
     unstable.pika-backup
+    spotify
   ];
 
   gaming.enable = true;
