@@ -121,6 +121,8 @@
 
   development.enable = true;
 
+  nushell.enable = true;
+
   # this doesnt work cause of some weird stuff
 #   sublime-text.enable = true;
 
