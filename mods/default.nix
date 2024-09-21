@@ -4,5 +4,6 @@
         ./gaming.nix
         ./sublime.nix
         ./development.nix
+        ./nushell.nix
     ];
 }
