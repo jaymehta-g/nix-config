@@ -1,4 +1,4 @@
-{pkgs, lib, config, ...}:
+{pkgs, unstable, lib, config, ...}:
 {
     options = {
         development.enable =
@@ -8,9 +8,9 @@
     config = lib.mkIf config.development.enable {
         environment.systemPackages = with pkgs; [
             vscode
-            python3
-            cargo
-            go
+            unstable.python3
+            unstable.cargo
+            unstable.go
         ];
     };
 }
