@@ -113,6 +113,7 @@
     signal-desktop
     discord
     vlc
+    pika-backup
   ];
 
   gaming.enable = true;
