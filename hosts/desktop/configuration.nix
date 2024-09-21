@@ -106,11 +106,8 @@
     gitg
     gh
     wget
-    vscode
     home-manager
     dracula-theme
-    unstable.python3
-    cargo
     unstable.magic-wormhole
     protonvpn-gui
     signal-desktop
@@ -119,6 +116,8 @@
 
   gaming.enable = true;
   gaming.minecraft.enable = true;
+
+  development.enable = true;
 
   # this doesnt work cause of some weird stuff
 #   sublime-text.enable = true;
