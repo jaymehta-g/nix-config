@@ -115,6 +115,7 @@
     vlc
     unstable.pika-backup
     spotify
+    nh
   ];
 
   gaming.enable = true;
