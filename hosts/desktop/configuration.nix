@@ -116,6 +116,7 @@
     unstable.pika-backup
     spotify
     nh
+    normcap
   ];
 
   gaming.enable = true;
