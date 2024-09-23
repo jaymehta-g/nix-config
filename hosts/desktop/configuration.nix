@@ -123,7 +123,7 @@
 
   development.enable = true;
 
-  nushell.enable = true;
+#   nushell.enable = true;
 
   normcap.enable = true;
 
