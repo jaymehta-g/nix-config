@@ -5,5 +5,6 @@
         ./sublime.nix
         ./development.nix
         ./nushell.nix
+        ./normcap.nix
     ];
 }

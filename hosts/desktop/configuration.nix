@@ -116,7 +116,6 @@
     unstable.pika-backup
     spotify
     nh
-    normcap
   ];
 
   gaming.enable = true;
@@ -125,6 +124,8 @@
   development.enable = true;
 
   nushell.enable = true;
+
+  normcap.enable = true;
 
   # this doesnt work cause of some weird stuff
 #   sublime-text.enable = true;
