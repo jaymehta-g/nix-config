@@ -8,5 +8,6 @@
         ./normcap.nix
         ./kde-plasma.nix
         ./balena-etcher.nix
+        ./i3wm.nix
     ];
 }

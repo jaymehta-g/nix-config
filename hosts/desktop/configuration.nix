@@ -79,7 +79,8 @@
   };
 
   # Enable KDE
-  kde-plasma.enable = true;
+#   kde-plasma.enable = true;
+  i3wm.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
