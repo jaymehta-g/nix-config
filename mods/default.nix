@@ -6,5 +6,6 @@
         ./development.nix
         ./nushell.nix
         ./normcap.nix
+        ./kde-plasma.nix
     ];
 }

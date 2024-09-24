@@ -45,10 +45,6 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -80,11 +76,10 @@
     isNormalUser = true;
     description = "jay";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
   };
+
+  # Enable KDE
+  kde-plasma.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -101,7 +96,6 @@
   # Install packages globally
   environment.systemPackages = with pkgs; [
     libsForQt5.qtstyleplugin-kvantum
-    kdePackages.kdialog
     git
     gitg
     gh
@@ -126,9 +120,6 @@
 #   nushell.enable = true;
 
   normcap.enable = true;
-
-  # this doesnt work cause of some weird stuff
-#   sublime-text.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
