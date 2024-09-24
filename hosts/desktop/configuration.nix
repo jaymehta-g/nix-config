@@ -110,6 +110,7 @@
     unstable.pika-backup
     spotify
     nh
+    ventoy
   ];
 
   gaming.enable = true;

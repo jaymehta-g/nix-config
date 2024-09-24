@@ -7,5 +7,6 @@
         ./nushell.nix
         ./normcap.nix
         ./kde-plasma.nix
+        ./balena-etcher.nix
     ];
 }
