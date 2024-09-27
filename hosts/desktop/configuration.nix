@@ -72,10 +72,11 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.groups.nix-manager = {};
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "nix-manager"];
   };
 
   # Enable KDE
