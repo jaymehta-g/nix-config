@@ -49,7 +49,7 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  };
+  }; 
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -68,10 +68,6 @@
     pulse.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.groups.nix-manager = {};
   users.users.jay = {
     isNormalUser = true;
@@ -81,7 +77,6 @@
 
   # Enable KDE
   kde-plasma.enable = true;
-#  i3wm.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -90,9 +85,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Allow running executables
-
   programs.nix-ld.enable = true;
-
   programs.nix-ld.libraries = [];
 
   # Install packages globally
@@ -112,14 +105,14 @@
     unstable.pika-backup
     spotify
     nh
-  ];
+  ]; 
 
   gaming.enable = true;
   gaming.minecraft.enable = true;
 
   development.enable = true;
 
-#   nushell.enable = true;
+  nushell.enable = true;
 
   normcap.enable = true;
 
