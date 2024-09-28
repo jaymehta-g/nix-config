@@ -76,7 +76,7 @@
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" "nix-manager"];
+    extraGroups = [ "networkmanager" "wheel" "nix-manager" ];
   };
 
   # Enable KDE
