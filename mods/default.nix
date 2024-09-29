@@ -10,5 +10,7 @@
         ./balena-etcher.nix
         ./i3wm.nix
         ./custom-fonts.nix
+        ./grub-theme.nix
+        ./waydroid.nix
     ];
 }
