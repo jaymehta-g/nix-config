@@ -95,7 +95,6 @@
     gh
     wget
     home-manager
-    dracula-theme
     unstable.magic-wormhole
     protonvpn-gui
     signal-desktop

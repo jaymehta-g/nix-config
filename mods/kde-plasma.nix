@@ -14,6 +14,7 @@
         environment.systemPackages = [
             pkgs.kdePackages.kate
             pkgs.kdePackages.kdialog
+            pkgs.dracula-theme
         ];
     };
 }
