@@ -117,7 +117,7 @@
 
   custom-fonts.enable = true;
 
-  waydroid.enable = true;
+#   waydroid.enable = true;
 
   # Rice
   # grub-theme.enable = true;
