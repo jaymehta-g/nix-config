@@ -8,6 +8,7 @@
     config = lib.mkIf config.nushell.enable {
         environment.systemPackages = [
             pkgs.nushell
+            pkgs.starship
         ];
         users.users.jay.shell = pkgs.nushell;
     };
