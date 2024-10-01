@@ -99,6 +99,7 @@
     protonvpn-gui
     signal-desktop
     discord
+    telegram-desktop
     vlc
     unstable.pika-backup
     spotify
