@@ -6,6 +6,10 @@
     };
 
     config = lib.mkIf config.custom-fonts.enable {
-        fonts.packages = with pkgs; [ fira-code ];
+        fonts.packages = with pkgs; [ 
+            fira-code 
+            (nerdfonts.override { fonts = [ "FiraCode" ]; })
+        ];
+        
     };
 }
