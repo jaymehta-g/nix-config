@@ -89,6 +89,7 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
+    vim
     git
     gitg
     gh
