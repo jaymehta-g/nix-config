@@ -97,6 +97,7 @@
     magic-wormhole
     gnumake
     polkit
+    nh
     # TODO move these to their own modules eventually:
     protonvpn-gui
     signal-desktop
@@ -105,7 +106,7 @@
     vlc
     unstable.pika-backup
     spotify
-    nh
+    gimp
   ]; 
 
   gaming.enable = true;
