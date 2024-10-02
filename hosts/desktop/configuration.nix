@@ -96,7 +96,6 @@
     home-manager
     magic-wormhole
     gnumake
-    polkit
     nh
     # TODO move these to their own modules eventually:
     protonvpn-gui
