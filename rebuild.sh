@@ -6,7 +6,7 @@ git diff -U0 HEAD
 
 echo "Now rebuilding..."
 
-nh os switch .
+sudo nixos-rebuild switch
 
 if [ $? -ne 0 ]; then
     echo "Nixos Rebuilt Unsuccessful, see above"

@@ -96,6 +96,8 @@
     wget
     home-manager
     unstable.magic-wormhole
+    gnumake
+    # TODO move these to their own modules eventually:
     protonvpn-gui
     signal-desktop
     discord
