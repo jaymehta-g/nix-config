@@ -16,6 +16,7 @@
             kdePackages.kate
             kdePackages.kdialog
             dracula-theme
+            libsForQt5.ksshaskpass
         ];
     };
 }
