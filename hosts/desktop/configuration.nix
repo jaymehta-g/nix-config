@@ -89,14 +89,14 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
-    libsForQt5.qtstyleplugin-kvantum
     git
     gitg
     gh
     wget
     home-manager
-    unstable.magic-wormhole
+    magic-wormhole
     gnumake
+    polkit
     # TODO move these to their own modules eventually:
     protonvpn-gui
     signal-desktop

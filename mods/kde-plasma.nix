@@ -11,10 +11,11 @@
         services.desktopManager.plasma6.enable = true;
 
         # KDE text editor
-        environment.systemPackages = [
-            pkgs.kdePackages.kate
-            pkgs.kdePackages.kdialog
-            pkgs.dracula-theme
+        environment.systemPackages = with pkgs; [
+            libsForQt5.qtstyleplugin-kvantum
+            kdePackages.kate
+            kdePackages.kdialog
+            dracula-theme
         ];
     };
 }
