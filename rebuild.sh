@@ -6,7 +6,13 @@ git diff -U0 HEAD
 
 echo "Now rebuilding..."
 
-sudo nixos-rebuild switch
+rebuildcommand="nixos-rebuild switch"
+which ksshaskpass
+if [ $? -eq 0 ]; then
+    SUDO_ASKPASS=$(which ksshaskpass) sudo -A $rebuildcommand
+else
+    sudo $rebuildcommand
+fi
 
 if [ $? -ne 0 ]; then
     echo "Nixos Rebuilt Unsuccessful, see above"
