@@ -11,6 +11,7 @@
             unstable.python3
             unstable.cargo
             unstable.go
+            burpsuite
         ];
     };
 }
