@@ -101,6 +101,7 @@
     gnumake
     nh
     # TODO move these to their own modules eventually:
+    ffmpeg_7
     obs-studio
     protonvpn-gui
     signal-desktop
