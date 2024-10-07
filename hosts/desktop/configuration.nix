@@ -101,6 +101,7 @@
     gnumake
     nh
     # TODO move these to their own modules eventually:
+    obs-studio
     protonvpn-gui
     signal-desktop
     discord
