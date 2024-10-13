@@ -104,6 +104,7 @@
     gnumake
     nh
     # TODO move these to their own modules eventually:
+    p7zip
     ffmpeg_7
     obs-studio
     protonvpn-gui
