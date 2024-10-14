@@ -75,7 +75,7 @@
   # popping and crackling fix
   services.pipewire.extraConfig.pipewire."92-low-latency" = 
     let 
-      quantum=48;
+      quantum=64;
     in 
     {
     "context.properties" = {
