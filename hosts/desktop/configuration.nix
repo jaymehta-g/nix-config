@@ -70,7 +70,20 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    wireplumber.enable = true; #?
+  };
+
+  # popping and crackling fix
+  services.pipewire.extraConfig.pipewire."92-low-latency" = 
+    let 
+      quantum=48;
+    in 
+    {
+    "context.properties" = {
+      "default.clock.rate" = 48000;
+      "default.clock.quantum" = quantum;
+      "default.clock.min-quantum" = quantum;
+      "default.clock.max-quantum" = quantum;
+    };
   };
 
   users.groups.nix-manager = {};
