@@ -73,16 +73,12 @@
   };
 
   # popping and crackling fix
-  services.pipewire.extraConfig.pipewire."92-low-latency" = 
-    let 
-      quantum=128;
-    in 
-    {
+  services.pipewire.extraConfig.pipewire."92-low-latency" = {
     "context.properties" = {
       "default.clock.rate" = 48000;
-      "default.clock.quantum" = quantum;
-      "default.clock.min-quantum" = quantum;
-      "default.clock.max-quantum" = quantum;
+      "default.clock.quantum" = 256;
+      "default.clock.min-quantum" = 256;
+      "default.clock.max-quantum" = 512;
     };
   };
 
