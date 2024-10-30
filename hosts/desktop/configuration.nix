@@ -158,8 +158,6 @@
 
   development.enable = true;
 
-  nushell.enable = true;
-
   normcap.enable = true;
 
   custom-fonts.enable = true;
