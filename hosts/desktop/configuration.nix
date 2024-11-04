@@ -151,6 +151,7 @@
     unstable.pika-backup
     spotify
     gimp
+    libreoffice-still
   ]; 
 
   gaming.enable = true;
