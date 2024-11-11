@@ -152,6 +152,7 @@
     spotify
     gimp
     libreoffice-still
+    google-chrome
   ]; 
 
   gaming.enable = true;
