@@ -13,6 +13,7 @@
             unstable.go
             burpsuite
             unstable.python312Packages.pip
+            libgcc
         ];
     };
 }
