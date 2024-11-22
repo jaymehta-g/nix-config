@@ -153,6 +153,7 @@
     gimp
     libreoffice-still
     google-chrome
+    rclone
   ]; 
 
   gaming.enable = true;
