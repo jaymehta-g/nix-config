@@ -154,6 +154,7 @@
     libreoffice-still
     google-chrome
     rclone
+    direnv
   ]; 
 
   gaming.enable = true;
