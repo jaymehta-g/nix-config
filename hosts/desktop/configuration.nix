@@ -155,6 +155,7 @@
     google-chrome
     rclone
     direnv
+    xed
   ]; 
 
   gaming.enable = true;
