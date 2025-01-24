@@ -148,7 +148,6 @@
     discord
     telegram-desktop
     vlc
-    unstable.pika-backup
     spotify
     gimp
     libreoffice-still

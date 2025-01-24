@@ -9,6 +9,7 @@
         environment.systemPackages = with pkgs; [
             vscode
             unstable.python3
+            python312Packages.numpy
             unstable.cargo
             unstable.go
             burpsuite
