@@ -154,7 +154,8 @@
     google-chrome
     rclone
     direnv
-    xed
+    xed-editor
+    tailscale
   ]; 
 
   gaming.enable = true;
