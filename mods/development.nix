@@ -1,5 +1,6 @@
 {pkgs, unstable, lib, config, ...}:
 {
+
     options = {
         development.enable =
             lib.mkEnableOption "enables";
@@ -16,5 +17,7 @@
             unstable.python312Packages.pip
             libgcc
         ];
+
+        services.tailscale.enable = true;
     };
 }

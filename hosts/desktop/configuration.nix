@@ -155,7 +155,6 @@
     rclone
     direnv
     xed-editor
-    tailscale
   ]; 
 
   gaming.enable = true;
