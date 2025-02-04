@@ -155,6 +155,7 @@
     rclone
     direnv
     xed-editor
+    aseprite
   ]; 
 
   gaming.enable = true;
