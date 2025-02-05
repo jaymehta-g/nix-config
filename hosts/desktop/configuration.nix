@@ -163,6 +163,8 @@
 
   development.enable = true;
 
+  instant-messaging.enable = true;
+
   normcap.enable = true;
 
   custom-fonts.enable = true;
