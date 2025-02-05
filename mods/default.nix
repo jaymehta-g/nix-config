@@ -12,5 +12,6 @@
         ./custom-fonts.nix
         ./grub-theme.nix
         ./waydroid.nix
+        ./gnome-desktop.nix
     ];
 }
