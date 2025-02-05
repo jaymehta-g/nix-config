@@ -157,6 +157,8 @@
     direnv
     xed-editor
     aseprite
+    zenity
+    pika-backup
   ]; 
 
   gaming.enable = true;

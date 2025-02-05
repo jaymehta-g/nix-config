@@ -30,4 +30,4 @@ git commit -a -m "$current"
 
 popd # return to whatever dir you were in
 
-kdialog --msgbox "Nixos Rebuild Ok 👍"
+echo "Nixos Rebuild Ok 👍"
