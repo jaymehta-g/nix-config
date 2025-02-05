@@ -1,10 +1,16 @@
 {pkgs, lib, config, ...}:
-let
-  helloWorld = pkgs.writeShellScriptBin "helloWorld" ''
-    echo Hello World
-  '';
-
-in 
 {
-  environment.systemPackages = [ helloWorld ];
+    options = {
+        rebuild-script.enable =
+            lib.mkEnableOption "enables";
+    };
+
+    config = 
+      lib.mkIf config.rebuild-script.enable 
+    {
+      environment.systemPackages = [ (
+        pkgs.writeShellScriptBin "rebuild" 
+          builtins.readFile ../rebuild.sh
+      )];
+    };
 }
