@@ -16,6 +16,7 @@
             burpsuite
             unstable.python312Packages.pip
             libgcc
+            sl
         ];
 
         services.tailscale.enable = true;
