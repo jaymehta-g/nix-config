@@ -115,8 +115,8 @@
     extraGroups = [ "networkmanager" "wheel" "nix-manager" ];
   };
 
-  # Enable KDE
-  kde-plasma.enable = false;
+  # Pick DE
+  # kde-plasma.enable = true;
   gnome-desktop.enable = true;
 
   # Install firefox.
@@ -145,9 +145,6 @@
     ffmpeg_7
     obs-studio
     protonvpn-gui
-    signal-desktop
-    discord
-    telegram-desktop
     vlc
     spotify
     gimp
