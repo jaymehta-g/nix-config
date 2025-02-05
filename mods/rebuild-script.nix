@@ -10,7 +10,7 @@
     {
       environment.systemPackages = [ (
         pkgs.writeShellScriptBin "rebuild" 
-          builtins.readFile ../rebuild.sh
+          (builtins.readFile ../rebuild.sh)
       )];
     };
 }

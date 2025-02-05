@@ -15,6 +15,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
   # empty /tmp
   boot.tmp.cleanOnBoot = true;
 
@@ -71,6 +72,9 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+  rebuild-script.enable = true;
+
 
   # popping and crackling fix
   services.pipewire.extraConfig = {
