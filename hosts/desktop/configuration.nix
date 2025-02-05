@@ -116,7 +116,8 @@
   };
 
   # Enable KDE
-  kde-plasma.enable = true;
+  kde-plasma.enable = false;
+  gnome-desktop.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
