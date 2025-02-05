@@ -155,7 +155,7 @@
     xed-editor
     aseprite
     zenity
-    pika-backup
+    restic
   ]; 
 
   gaming.enable = true;
