@@ -160,6 +160,7 @@
     aseprite
     zenity
     restic
+    zoom-us
   ]; 
 
   gaming.enable = true;
