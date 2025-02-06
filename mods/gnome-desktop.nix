@@ -15,7 +15,7 @@
             bibata-cursors
             gnomeExtensions.panel-workspace-scroll
             blackbox-terminal
-            nemo
+            nemo-with-extensions
             gnomeExtensions.compiz-windows-effect
             gnomeExtensions.compiz-alike-magic-lamp-effect
         ];
