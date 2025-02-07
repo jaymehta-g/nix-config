@@ -19,6 +19,7 @@
             gnomeExtensions.compiz-windows-effect
             gnomeExtensions.compiz-alike-magic-lamp-effect
             gnomeExtensions.blur-my-shell
+            gnomeExtensions.dock-from-dash
         ];
         # https://discourse.nixos.org/t/howto-disable-most-gnome-default-applications-and-what-they-are/13505
         environment.gnome.excludePackages = with pkgs; [
