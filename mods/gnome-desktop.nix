@@ -34,6 +34,7 @@
             file-roller # archive manager
             geary       # email client
             seahorse    # password manager
+            nautilus    # files
 
             # these should be self explanatory
             gnome-maps
