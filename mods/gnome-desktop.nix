@@ -35,10 +35,12 @@
             geary       # email client
             seahorse    # password manager
             nautilus    # files
+            xterm       # console
 
             # these should be self explanatory
             gnome-maps
             gnome-music
+            gnome-console
         ];
     };
 }
