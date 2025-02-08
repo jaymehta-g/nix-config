@@ -1,4 +1,4 @@
-{pkgs, lib, config, ...}:
+{pkgs, unstable, lib, config, ...}:
 {
     options = {
         normcap.enable =
@@ -7,7 +7,7 @@
 
     config = lib.mkIf config.normcap.enable {
         environment.systemPackages = [ 
-            pkgs.normcap
+            unstable.normcap
             pkgs.xsel
         ];
     };
