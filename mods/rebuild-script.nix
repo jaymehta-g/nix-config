@@ -1,3 +1,4 @@
+# This expects pkexec and zenity
 {pkgs, lib, config, ...}:
 {
     options = {
