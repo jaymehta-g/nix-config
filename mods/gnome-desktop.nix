@@ -37,7 +37,7 @@
         environment.gnome.excludePackages = with pkgs; [
             baobab      # disk usage analyzer
             cheese      # photo booth
-            eog         # image viewer
+            # eog         # image viewer
             epiphany    # web browser
             simple-scan # document scanner
             totem       # video player
