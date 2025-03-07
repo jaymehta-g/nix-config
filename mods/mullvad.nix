@@ -1,8 +1,8 @@
 {pkgs, lib, config, ...}:
 {
     options = {
-        NAME.enable =
-            lib.mullvad "enables";
+        mullvad.enable =
+            lib.mkEnableOption "enables";
     };
 
     config = lib.mkIf config.mullvad.enable {

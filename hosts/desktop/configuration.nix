@@ -133,7 +133,7 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
 
-  services.mullvad-vpn.enable = true;
+  mullvad.enable = true;
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
@@ -164,6 +164,7 @@
     restic
     zoom-us
     xdg-desktop-portal
+    qbittorrent
   ]; 
 
   gaming.enable = true;
