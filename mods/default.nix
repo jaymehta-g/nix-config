@@ -15,5 +15,6 @@
         ./waydroid.nix
         ./gnome-desktop.nix
         ./instant-messaging.nix
+        ./mullvad.nix
     ];
 }
