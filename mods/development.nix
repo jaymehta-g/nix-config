@@ -12,6 +12,8 @@
             unstable.python3
             python312Packages.numpy
             unstable.cargo
+            rustc
+            rustup
             unstable.go
             burpsuite
             unstable.python312Packages.pip
