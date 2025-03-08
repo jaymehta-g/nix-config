@@ -165,6 +165,7 @@
     zoom-us
     xdg-desktop-portal
     qbittorrent
+    r2modman
   ]; 
 
   gaming.enable = true;
