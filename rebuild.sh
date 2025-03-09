@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+push=true
+
+if [ $# -gt 0 ] && ( [ $1 = "-n" ] || [ $1 = "--no-push" ] ); then
+    echo "No push selected"
+    push=false
+fi
+
 pushd /etc/nixos
 
 git diff -U0 HEAD
@@ -7,12 +14,7 @@ git diff -U0 HEAD
 echo "Now rebuilding..."
 
 rebuildcommand="nixos-rebuild switch"
-# which ksshaskpass
-# if [ $? -eq 0 ]; then
-#     SUDO_ASKPASS=$(which ksshaskpass) sudo -A $rebuildcommand
-# else
-#     sudo $rebuildcommand
-# fi
+
 pkexec $rebuildcommand
 
 if [ $? -ne 0 ]; then
@@ -28,6 +30,10 @@ current=$(nixos-rebuild list-generations | grep current)
 git add .
 
 git commit -a -m "$current"
+
+if [ $push = true ]; then
+    git push
+fi
 
 popd # return to whatever dir you were in
 
