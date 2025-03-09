@@ -11,7 +11,7 @@
             vscode
             unstable.python3
             python312Packages.numpy
-            unstable.cargo
+            cargo
             rustc
             rustup
             unstable.go
