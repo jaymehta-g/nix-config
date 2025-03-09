@@ -76,7 +76,7 @@
     pulse.enable = true;
   };
 
-  rebuild-script.enable = true;
+  utility-scripts.enable = true;
 
 
   # popping and crackling fix

@@ -1,7 +1,7 @@
 {pkgs, lib, ...}:
 {
     imports = [
-        ./rebuild-script.nix
+        ./utility-scripts
         ./gaming.nix
         ./sublime.nix
         ./development.nix
