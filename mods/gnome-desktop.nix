@@ -22,7 +22,7 @@
             feh
             gnome47Extensions."dash-to-dock@micxgx.gmail.com"
             gnomeExtensions.coverflow-alt-tab
-            gnomeExtensions.fly-pie
+            gnomeExtensions.gnome-bedtime
         ];
         # https://discourse.nixos.org/t/howto-disable-most-gnome-default-applications-and-what-they-are/13505
         environment.gnome.excludePackages = with pkgs; [
