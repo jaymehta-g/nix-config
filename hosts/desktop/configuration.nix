@@ -164,11 +164,11 @@
     xed-editor
     aseprite
     zenity
-    restic
     zoom-us
     xdg-desktop-portal
     qbittorrent
     r2modman
+    stow
   ]; 
 
   gaming.enable = true;
