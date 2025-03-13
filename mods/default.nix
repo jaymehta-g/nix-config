@@ -16,5 +16,6 @@
         ./gnome-desktop.nix
         ./instant-messaging.nix
         ./mullvad.nix
+        ./neovim.nix
     ];
 }

@@ -175,6 +175,7 @@
   gaming.minecraft.enable = true;
 
   development.enable = true;
+  neovim.enable = true;
 
   instant-messaging.enable = true;
 
