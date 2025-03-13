@@ -17,7 +17,7 @@
             unstable.go
             burpsuite
             unstable.python312Packages.pip
-            libgcc
+            gcc
             godot_4
             sl
         ];
