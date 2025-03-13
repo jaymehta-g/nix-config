@@ -9,6 +9,8 @@ fi
 
 pushd /etc/nixos
 
+git add -A
+
 git diff -U0 HEAD
 
 echo "Now rebuilding..."
