@@ -6,8 +6,12 @@
     };
 
     config = lib.mkIf config.neovim.enable {
-        environment.systemPackages = [
-            pkgs.neovim
+        environment.systemPackages = with pkgs; [
+            neovim
+            gcc
+            fzf
+            ripgrep
+            fd
         ];
     };
 }
