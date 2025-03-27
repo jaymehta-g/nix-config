@@ -7,7 +7,7 @@
 
     config = lib.mkIf config.normcap.enable {
         environment.systemPackages = [ 
-            unstable.normcap
+            pkgs.normcap
             pkgs.xsel
         ];
     };
