@@ -2,9 +2,15 @@
 
 push=true
 
-if [ $# -gt 0 ] && ( [ $1 = "-n" ] || [ $1 = "--no-push" ] ); then
-    echo "No push selected"
-    push=false
+if [ $# -gt 0 ]; then
+    if ( [ $1 = "-n" ] || [ $1 = "--no-push" ] ); then
+        echo "No push selected"
+        push=false
+    else
+        echo "Invalid option"
+        echo "--no-push or -n to not push after commit"
+        exit 1
+    fi
 fi
 
 pushd /etc/nixos
@@ -20,6 +26,7 @@ rebuildcommand="nixos-rebuild switch"
 pkexec $rebuildcommand
 
 if [ $? -ne 0 ]; then
+    zenity --info --text="Nixos Rebuild Failed"
     echo "Nixos Rebuilt Unsuccessful, see above"
     read
     exit 1

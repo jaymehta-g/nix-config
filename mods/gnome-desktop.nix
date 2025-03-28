@@ -36,7 +36,7 @@
             file-roller # archive manager
             geary       # email client
             seahorse    # password manager
-            nautilus    # files
+            # nautilus    # files
             xterm       # console
 
             # these should be self explanatory
