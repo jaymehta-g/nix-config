@@ -8,7 +8,11 @@
     config = lib.mkIf config.obsidian.enable {
         environment.systemPackages = with pkgs; [
             obsidian
-            syncthing
         ];
+
+        services.syncthing = {
+            enable = true;
+            openDefaultPorts = true;
+        };
     };
 }
