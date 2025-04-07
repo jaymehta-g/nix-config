@@ -183,6 +183,8 @@
 
   custom-fonts.enable = true;
 
+  obsidian.enable = true;
+
   # Rice
   # grub-theme.enable = true;
 
