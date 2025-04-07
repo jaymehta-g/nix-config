@@ -17,5 +17,6 @@
         ./instant-messaging.nix
         ./mullvad.nix
         ./neovim.nix
+        ./obsidian.nix
     ];
 }
