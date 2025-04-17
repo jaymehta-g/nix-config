@@ -26,7 +26,7 @@ rebuildcommand="nixos-rebuild switch"
 pkexec $rebuildcommand
 
 if [ $? -ne 0 ]; then
-    zenity --info --text="Nixos Rebuild Failed"
+    zenity --info --text="Nixos Rebuild Failed 💔💔💔"
     echo "Nixos Rebuilt Unsuccessful, see above"
     read
     exit 1
@@ -46,4 +46,4 @@ fi
 
 popd # return to whatever dir you were in
 
-zenity --info --text="Nixos Rebuild Ok 👍"
+zenity --info --text="Nix Rebuild Ok 🤠"
