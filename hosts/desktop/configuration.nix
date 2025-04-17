@@ -185,8 +185,6 @@
 
   obsidian.enable = true;
 
-  ipfs.enable = true;
-
   # Rice
   # grub-theme.enable = true;
 
