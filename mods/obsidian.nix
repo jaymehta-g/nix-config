@@ -14,5 +14,7 @@
             enable = true;
             openDefaultPorts = true;
         };
+
+        users.groups."syncthing".members = ["syncthing" "jay"];
     };
 }
