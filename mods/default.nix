@@ -18,5 +18,6 @@
         ./mullvad.nix
         ./neovim.nix
         ./obsidian.nix
+        ./ipfs.nix
     ];
 }
