@@ -169,6 +169,7 @@
     qbittorrent
     r2modman
     stow
+    retroarch
   ]; 
 
   gaming.enable = true;
