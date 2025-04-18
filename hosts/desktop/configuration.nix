@@ -169,7 +169,11 @@
     qbittorrent
     r2modman
     stow
-    retroarch
+    (retroarch.override {
+      cores = with libretro; [
+        snes9x
+      ];
+    })
   ]; 
 
   gaming.enable = true;
