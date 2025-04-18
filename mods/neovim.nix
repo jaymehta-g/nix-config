@@ -19,7 +19,7 @@
                     fzf
                     ripgrep
                     fd
-                ]} ${neovim} $@
+                ]} ${neovim}/bin/nvim $@
             '')
         ];
     };
