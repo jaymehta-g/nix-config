@@ -19,7 +19,7 @@
                     fzf
                     ripgrep
                     fd
-                ]} ${neovim}/bin/nvim $@
+                ]}:$PATH ${neovim}/bin/nvim $@
             '')
         ];
     };
