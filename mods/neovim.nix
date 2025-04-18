@@ -7,11 +7,8 @@
 
     config = lib.mkIf config.neovim.enable {
         environment.systemPackages = with pkgs; [
-            # neovim
-            # gcc
-            # fzf
-            # ripgrep
-            # fd
+            # these programs only available to nvim
+            # because they are only added to path before running neovim binary
             (writeShellScriptBin "nvim" 
             ''
                 PATH=${lib.makeBinPath [
