@@ -174,6 +174,7 @@
         snes9x
       ];
     })
+    thunderbird
   ]; 
 
   gaming.enable = true;

@@ -18,7 +18,7 @@
             burpsuite
             unstable.python312Packages.pip
             gcc
-            unstable.godot_4
+            godot_4
             sl
         ];
 
