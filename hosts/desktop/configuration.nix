@@ -175,6 +175,7 @@
       ];
     })
     thunderbird
+    encfs
   ]; 
 
   gaming.enable = true;
