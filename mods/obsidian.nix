@@ -10,11 +10,16 @@
             obsidian
         ];
 
-        services.syncthing = {
+        services.syncthing = 
+        let
+            user = "jay";
+        in
+        {
             enable = true;
             openDefaultPorts = true;
+            inherit user;
+            dataDir = "/home/${user}/Syncthing";
+            configDir = "/home/${user}/.config/syncthing";
         };
-
-        users.groups."syncthing".members = ["syncthing" "jay"];
     };
 }
