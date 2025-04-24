@@ -9,6 +9,7 @@
         fonts.packages = with pkgs; [ 
             fira-code 
             (nerdfonts.override { fonts = [ "FiraCode" ]; })
+            inter-nerdfont
         ];
         
     };
