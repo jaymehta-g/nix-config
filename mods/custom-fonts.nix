@@ -10,6 +10,7 @@
             fira-code 
             (nerdfonts.override { fonts = [ "FiraCode" ]; })
             inter-nerdfont
+            karla
         ];
         
     };
