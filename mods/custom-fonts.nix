@@ -11,6 +11,8 @@
             (nerdfonts.override { fonts = [ "FiraCode" ]; })
             inter-nerdfont
             karla
+            atkinson-hyperlegible
+            atkinson-monolegible
         ];
         
     };
