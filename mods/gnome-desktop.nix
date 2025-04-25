@@ -23,6 +23,7 @@
             gnome47Extensions."dash-to-dock@micxgx.gmail.com"
             gnomeExtensions.coverflow-alt-tab
             gnomeExtensions.gnome-bedtime
+            gnomeExtensions.status-icons
         ];
         # https://discourse.nixos.org/t/howto-disable-most-gnome-default-applications-and-what-they-are/13505
         environment.gnome.excludePackages = with pkgs; [
