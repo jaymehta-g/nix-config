@@ -20,6 +20,7 @@
             gcc
             godot_4
             sl
+            starship
         ];
 
         services.tailscale.enable = true;
