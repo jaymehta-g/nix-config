@@ -163,7 +163,6 @@
     rclone
     direnv
     xed-editor
-    aseprite
     zenity
     zoom-us
     xdg-desktop-portal
