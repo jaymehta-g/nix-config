@@ -179,6 +179,9 @@
     xclip
   ]; 
 
+  # tablet
+  hardware.opentabletdriver.enable = true;
+
   gaming.enable = true;
   gaming.minecraft.enable = true;
 
