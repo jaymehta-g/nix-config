@@ -24,7 +24,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "75.75.75.75" ];
+  networking.networkmanager.insertNameservers = [ "1.1.1.1" ];
 
   # Disable firewall
   networking.firewall.enable = false;
