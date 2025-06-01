@@ -146,7 +146,6 @@
     gh
     wget
     home-manager
-    magic-wormhole
     gnumake
     nh
     # TODO move these to their own modules eventually:
@@ -160,7 +159,6 @@
     libreoffice-still
     google-chrome
     rclone
-    direnv
     xed-editor
     zenity
     zoom-us
