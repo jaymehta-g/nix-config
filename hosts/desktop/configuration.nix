@@ -166,11 +166,11 @@
     qbittorrent
     r2modman
     stow
-    (retroarch.override {
-      cores = with libretro; [
-        snes9x
-      ];
-    })
+#    (retroarch.override {
+#      cores = with libretro; [
+        #snes9x
+      #];
+    #})
     thunderbird
     encfs
     xclip

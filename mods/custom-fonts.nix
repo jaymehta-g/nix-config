@@ -8,7 +8,7 @@
     config = lib.mkIf config.custom-fonts.enable {
         fonts.packages = with pkgs; [ 
             fira-code 
-            (nerdfonts.override { fonts = [ "FiraCode" ]; })
+            nerd-fonts.fira-code
             inter-nerdfont
             karla
             atkinson-hyperlegible
