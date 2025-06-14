@@ -175,6 +175,7 @@
     encfs
     xclip
     inkscape
+    krita
   ]; 
 
   # tablet
