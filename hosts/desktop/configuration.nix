@@ -135,7 +135,7 @@
   # Allow running executables
   programs.nix-ld = {
     enable = true;
-    libraries = pkgs.steam-run.args.multiPkgs pkgs;
+    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [pkgs.libGL];
   };
   # programs.nix-ld.libraries = [];
 
