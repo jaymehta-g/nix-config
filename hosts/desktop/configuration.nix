@@ -176,6 +176,7 @@
     xclip
     inkscape
     krita
+    steam-run
   ]; 
 
   # tablet
