@@ -133,7 +133,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Allow running executables
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = pkgs.steam-run.args.multiPkgs pkgs;
+  };
   # programs.nix-ld.libraries = [];
 
   mullvad.enable = true;
