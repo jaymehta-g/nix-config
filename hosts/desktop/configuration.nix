@@ -113,6 +113,9 @@
         };
       };
   };
+
+  # windows time desync fix
+  time.hardwareClockInLocalTime = true;
   
 
   users.groups.nix-manager = {};
