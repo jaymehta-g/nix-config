@@ -1,4 +1,4 @@
-{pkgs, lib, config, ...}:
+{pkgs, unstable, lib, config, ...}:
 {
     options = {
         gaming.enable =
@@ -11,7 +11,7 @@
         environment.systemPackages = with pkgs; [
             bottles
         ] ++ (if !config.gaming.minecraft.enable then [] else [
-            prismlauncher
+            unstable.prismlauncher
             (pkgs.writeShellScriptBin "playit" "nix run github:pedorich-n/playit-nixos-module#playit-cli -- start")
         ]);
 
