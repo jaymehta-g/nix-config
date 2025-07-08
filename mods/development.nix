@@ -8,7 +8,7 @@
 
     config = lib.mkIf config.development.enable {
         environment.systemPackages = with pkgs; [
-            vscode
+            unstable.vscode
             unstable.python3
             python312Packages.numpy
             cargo
