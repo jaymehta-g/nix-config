@@ -8,5 +8,6 @@
   imports = [
     ./winreboot.nix
     ./rebuild.nix
+    ./writetemp.nix
   ];
 }
