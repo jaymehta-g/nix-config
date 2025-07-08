@@ -4,12 +4,11 @@
       lib.mkIf config.utility-scripts.enable 
     {
       environment.systemPackages = [ (
-        pkgs.writeShellScriptBin "vimecho" 
+        pkgs.writeShellScriptBin "writetemp" 
           ''
             _vimecho=`mktemp`
             nvim $_vimecho
-            cat $_vimecho
-            rm $_vimecho
+            echo $_vimecho
           ''
       )];
     };
