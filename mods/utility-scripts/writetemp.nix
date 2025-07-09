@@ -8,7 +8,7 @@
           ''
             _vimecho=`mktemp`
             nvim $_vimecho
-            echo $_vimecho
+            echo -n "$_vimecho"
           ''
       )];
     };
