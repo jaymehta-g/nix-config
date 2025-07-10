@@ -183,6 +183,7 @@
     inkscape
     krita
     steam-run
+    anki
   ]; 
 
   # tablet
