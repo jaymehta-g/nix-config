@@ -179,6 +179,7 @@
     #})
     thunderbird
     encfs
+    gocryptfs
     xclip
     inkscape
     krita
