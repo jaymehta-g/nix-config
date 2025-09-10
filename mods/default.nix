@@ -19,5 +19,6 @@
         ./neovim.nix
         ./obsidian.nix
         ./ipfs.nix
+        ./virtualbox.nix
     ];
 }

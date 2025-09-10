@@ -204,6 +204,8 @@
 
   obsidian.enable = true;
 
+  virtualbox.enable = true;
+
   # Rice
   # grub-theme.enable = true;
 
