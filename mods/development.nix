@@ -11,6 +11,7 @@
             unstable.vscode
             unstable.python3
             python312Packages.numpy
+            python312Packages.pyzmq
             cargo
             rustc
             rustup
