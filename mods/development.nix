@@ -19,7 +19,7 @@
             burpsuite
             unstable.python312Packages.pip
             gcc
-            godot_4
+            unstable.godot_4
             sl
             starship
         ];
