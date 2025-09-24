@@ -10,14 +10,14 @@
         environment.systemPackages = with pkgs; [
             unstable.vscode
             unstable.python3
-            python312Packages.numpy
-            python312Packages.pyzmq
+            python313Packages.numpy
+            python313Packages.pyzmq
             cargo
             rustc
             rustup
             unstable.go
             burpsuite
-            unstable.python312Packages.pip
+            unstable.python313Packages.pip
             gcc
             unstable.godot_4
             sl
