@@ -215,7 +215,7 @@
     dates = "weekly";
     options = "--delete-older-than 15d";
   };
-  boot.loader.systemd-boot.configurationLimit = 3;
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
