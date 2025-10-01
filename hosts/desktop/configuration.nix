@@ -185,6 +185,7 @@
     krita
     steam-run
     anki
+    tmux
   ]; 
 
   # tablet
