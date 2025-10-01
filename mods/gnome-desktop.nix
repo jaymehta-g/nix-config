@@ -15,7 +15,7 @@
             bibata-cursors
             gnomeExtensions.panel-workspace-scroll
             blackbox-terminal
-            nemo-with-extensions
+            xfce.thunar
             gnomeExtensions.compiz-windows-effect
             gnomeExtensions.compiz-alike-magic-lamp-effect
             gnomeExtensions.blur-my-shell
