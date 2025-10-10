@@ -1,5 +1,8 @@
 {pkgs, unstable, lib, config, ...}:
 {
+    imports = [
+        ./neovim.nix
+    ];
 
     options = {
         development.enable =
