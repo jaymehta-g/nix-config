@@ -20,5 +20,6 @@
         ./obsidian.nix
         ./ipfs.nix
         ./virtualbox.nix
+        ./programs
     ];
 }

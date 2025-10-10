@@ -188,6 +188,8 @@
     tmux
   ]; 
 
+  thunar-fm.enable = true;
+
   # tablet
   hardware.opentabletdriver.enable = true;
 
