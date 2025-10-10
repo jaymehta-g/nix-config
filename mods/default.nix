@@ -4,7 +4,7 @@
         ./utility-scripts
         ./gaming.nix
         ./sublime.nix
-        ./development.nix
+        ./development
         ./nushell.nix
         ./normcap.nix
         ./kde-plasma.nix
