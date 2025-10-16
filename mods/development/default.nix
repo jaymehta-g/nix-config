@@ -25,6 +25,7 @@
             unstable.godot_4
             sl
             starship
+            tailscale
         ];
 
         #services.tailscale.enable = true;
