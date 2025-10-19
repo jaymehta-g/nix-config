@@ -19,6 +19,7 @@
                     luajitPackages.luarocks
                     lazygit
                     lua
+                    tree-sitter
                 ]}:$PATH ${neovim}/bin/nvim $@
             '')
         ];
