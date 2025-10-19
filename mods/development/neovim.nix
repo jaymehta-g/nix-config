@@ -16,6 +16,8 @@
                     fzf
                     ripgrep
                     fd
+                    luajitPackages.luarocks
+                    lazygit
                 ]}:$PATH ${neovim}/bin/nvim $@
             '')
         ];
