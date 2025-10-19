@@ -26,6 +26,7 @@
             sl
             starship
             tailscale
+            xonsh
         ];
 
         #services.tailscale.enable = true;

@@ -14,7 +14,7 @@
         environment.systemPackages = with pkgs; [
             bibata-cursors
             gnomeExtensions.panel-workspace-scroll
-            kitty
+            alacritty
             gnomeExtensions.compiz-windows-effect
             gnomeExtensions.compiz-alike-magic-lamp-effect
             gnomeExtensions.blur-my-shell
