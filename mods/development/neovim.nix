@@ -20,6 +20,7 @@
                     lazygit
                     lua
                     tree-sitter
+                    nodejs_24
                 ]}:$PATH ${neovim}/bin/nvim $@
             '')
         ];
