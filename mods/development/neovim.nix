@@ -18,6 +18,7 @@
                     fd
                     luajitPackages.luarocks
                     lazygit
+                    lua
                 ]}:$PATH ${neovim}/bin/nvim $@
             '')
         ];
