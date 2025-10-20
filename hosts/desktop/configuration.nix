@@ -186,6 +186,7 @@
     steam-run
     anki
     tmux
+    trashy
   ]; 
 
   thunar-fm.enable = true;
