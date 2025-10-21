@@ -15,6 +15,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # OBS fix
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
 
   # empty /tmp
   boot.tmp.cleanOnBoot = true;
@@ -189,7 +193,6 @@
     tmux
     trashy
     # obs virtual cam fix
-    linuxKernel.packages.linux_zen.v4l2loopback
   ]; 
 
   thunar-fm.enable = true;
