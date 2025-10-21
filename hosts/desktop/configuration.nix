@@ -157,7 +157,7 @@
     # TODO move these to their own modules eventually:
     p7zip
     ffmpeg_7
-    obs-studio
+    unstable.obs-studio
     protonvpn-gui
     vlc
     spotify
