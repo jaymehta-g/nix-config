@@ -66,6 +66,7 @@
   # possible bluetooth driver fix
   hardware.enableAllFirmware = true;
 
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -187,6 +188,8 @@
     anki
     tmux
     trashy
+    # obs virtual cam fix
+    linuxKernel.packages.linux_zen.v4l2loopback
   ]; 
 
   thunar-fm.enable = true;
