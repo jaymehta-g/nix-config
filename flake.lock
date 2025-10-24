@@ -32,6 +32,9 @@
     },
     "root": {
       "inputs": {
+        "ngrok": [
+          "nixpkgs"
+        ],
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }

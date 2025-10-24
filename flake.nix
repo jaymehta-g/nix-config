@@ -4,9 +4,13 @@
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    ngrok = {
+      follows = "nixpkgs";
+      url = "github:ngrok/ngrok-nix";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable }:
+  outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:
   let
     system = "x86_64-linux";
 
@@ -16,14 +20,23 @@
     };
 
     custom-modules = ./mods/default.nix;
+
   in {
     nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem rec {
-        specialArgs = { inherit system unstable; };
-
+      desktop = inputs.nixpkgs.lib.nixosSystem rec {
+        inherit system;
+        specialArgs = { inherit unstable inputs; };
         modules = [
-          { nixpkgs = { inherit system; config.allowUnfree = true;}; }
           ./hosts/desktop/configuration.nix
+          custom-modules
+        ];
+      };
+
+      laptop = nixpkgs.lib.nixosSystem rec {
+        inherit system;
+        specialArgs = { inherit unstable inputs; };
+        modules = [
+          ./hosts/laptop/configuration.nix
           custom-modules
         ];
       };
