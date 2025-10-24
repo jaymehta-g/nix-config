@@ -10,10 +10,6 @@
   let
     system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
     unstable = import nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;
@@ -23,9 +19,10 @@
   in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem rec {
-        specialArgs = { inherit system pkgs unstable; };
+        specialArgs = { inherit system unstable; };
 
         modules = [
+          { nixpkgs = { inherit system; config.allowUnfree = true;}; }
           ./hosts/desktop/configuration.nix
           custom-modules
         ];
