@@ -130,6 +130,14 @@
     extraGroups = [ "networkmanager" "wheel" "nix-manager" ];
   };
 
+  #fscrypt user
+  security.pam.enableFscrypt = true;
+  users.users.encuser = {
+    isNormalUser = true;
+    home="/home/encuser";
+    extraGroups  = [ "wheel" "networkmanager" ];
+  };
+
   # Pick DE
   # kde-plasma.enable = true;
   gnome-desktop.enable = true;
