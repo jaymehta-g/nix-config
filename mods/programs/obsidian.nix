@@ -2,7 +2,7 @@
 {
     options = {
         obsidian.enable =
-            lib.mkEnableOption "enables";
+          lib.mkOption { default = true; type = lib.types.bool; };
     };
 
     config = lib.mkIf config.obsidian.enable {
