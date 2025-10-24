@@ -21,6 +21,7 @@
                     lua
                     tree-sitter
                     nodejs_24
+                    nil
                 ]}:$PATH ${neovim}/bin/nvim $@
             '')
         ];
