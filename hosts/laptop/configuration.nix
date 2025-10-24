@@ -146,12 +146,8 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
-    vim
-    git
     gitg
     gh
-    wget
-    home-manager
     gnumake
     nh
     # TODO move these to their own modules eventually:
@@ -167,7 +163,6 @@
     zenity
     zoom-us
     xdg-desktop-portal
-    stow
 #    (retroarch.override {
 #      cores = with libretro; [
         #snes9x

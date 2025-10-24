@@ -81,9 +81,6 @@
     pulse.enable = true;
   };
 
-  utility-scripts.enable = true;
-
-
   # popping and crackling fix
   services.pipewire.extraConfig = {
     pipewire."92-low-latency" = {
@@ -130,18 +127,6 @@
     extraGroups = [ "networkmanager" "wheel" "nix-manager" ];
   };
 
-  #fscrypt user
-  security.pam.enableFscrypt = true;
-  users.users.encuser = {
-    isNormalUser = true;
-    home="/home/encuser";
-    extraGroups  = [ "wheel" "networkmanager" ];
-  };
-
-  # Pick DE
-  # kde-plasma.enable = true;
-  gnome-desktop.enable = true;
-
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -153,19 +138,11 @@
     enable = true;
     libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [pkgs.libGL pkgs.SDL2];
   };
-  # programs.nix-ld.libraries = [];
-
-  mullvad.enable = true;
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
-    vim
-    git
     gitg
     gh
-    wget
-    home-manager
-    gnumake
     nh
     # TODO move these to their own modules eventually:
     p7zip
@@ -184,14 +161,7 @@
     xdg-desktop-portal
     qbittorrent
     r2modman
-    stow
-#    (retroarch.override {
-#      cores = with libretro; [
-        #snes9x
-      #];
-    #})
     thunderbird
-    encfs
     gocryptfs
     xclip
     inkscape

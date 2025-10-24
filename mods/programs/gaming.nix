@@ -13,7 +13,6 @@
             everest-mons
         ] ++ (if !config.gaming.minecraft.enable then [] else [
             unstable.prismlauncher
-            (pkgs.writeShellScriptBin "playit" "nix run github:pedorich-n/playit-nixos-module#playit-cli -- start")
         ]);
 
         programs.nix-ld.enable = true;
