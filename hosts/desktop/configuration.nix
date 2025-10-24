@@ -173,8 +173,6 @@
     # obs virtual cam fix
   ]; 
 
-  thunar-fm.enable = true;
-
   # tablet
   hardware.opentabletdriver.enable = true;
 
@@ -184,13 +182,9 @@
   development.enable = true;
   neovim.enable = true;
 
-  instant-messaging.enable = true;
-
   normcap.enable = true;
 
   custom-fonts.enable = true;
-
-  obsidian.enable = true;
 
   virtualbox.enable = true;
 
