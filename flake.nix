@@ -5,7 +5,6 @@
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     ngrok = {
-      follows = "nixpkgs";
       url = "github:ngrok/ngrok-nix";
     };
   };
@@ -25,7 +24,7 @@
     nixosConfigurations = {
       desktop = inputs.nixpkgs.lib.nixosSystem rec {
         inherit system;
-        specialArgs = { inherit unstable inputs; };
+        specialArgs = { inherit unstable inputs;};
         modules = [
           ./hosts/desktop/configuration.nix
           custom-modules

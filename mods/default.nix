@@ -4,6 +4,7 @@
         ./development
         ./programs
         ./de
+        ./services
         ./all-hosts.nix
         ./custom-fonts.nix
         ./grub-theme.nix

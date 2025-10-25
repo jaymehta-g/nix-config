@@ -188,6 +188,8 @@
 
   virtualbox.enable = true;
 
+  ssh.enable = true;
+
   # Rice
   # grub-theme.enable = true;
 
