@@ -15,9 +15,9 @@
             python3
             python313Packages.numpy
             python313Packages.pyzmq
-            cargo
-            rustc
-            rustup
+            unstable.cargo
+            unstable.rustc
+            unstable.rustup
             unstable.go
             burpsuite
             python313Packages.pip
