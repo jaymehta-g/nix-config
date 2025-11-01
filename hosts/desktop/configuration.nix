@@ -13,8 +13,11 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+	  systemd-boot.enable = true;
+	  efi.canTouchEfiVariables = true;
+	  timeout = 1;
+  };
   # OBS fix
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
