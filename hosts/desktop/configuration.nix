@@ -181,17 +181,13 @@
 
   gaming.enable = true;
   gaming.minecraft.enable = true;
-
   development.enable = true;
   neovim.enable = true;
-
   normcap.enable = true;
-
   custom-fonts.enable = true;
-
   virtualbox.enable = true;
-
   ssh.enable = true;
+  gnome-rdp.enable = true;
 
   # Rice
   # grub-theme.enable = true;
