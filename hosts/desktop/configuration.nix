@@ -13,8 +13,11 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+	  systemd-boot.enable = true;
+	  efi.canTouchEfiVariables = true;
+	  timeout = 1;
+  };
   # OBS fix
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
@@ -178,17 +181,13 @@
 
   gaming.enable = true;
   gaming.minecraft.enable = true;
-
   development.enable = true;
   neovim.enable = true;
-
   normcap.enable = true;
-
   custom-fonts.enable = true;
-
   virtualbox.enable = true;
-
   ssh.enable = true;
+  gnome-rdp.enable = true;
 
   # Rice
   # grub-theme.enable = true;
