@@ -76,9 +76,6 @@
     pulse.enable = true;
   };
 
-  utility-scripts.enable = true;
-
-
   # # popping and crackling fix
   # services.pipewire.extraConfig = {
   #   pipewire."92-low-latency" = {
@@ -140,9 +137,6 @@
     enable = true;
     libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [pkgs.libGL pkgs.SDL2];
   };
-  # programs.nix-ld.libraries = [];
-
-  mullvad.enable = true;
 
   # Install packages globally
   environment.systemPackages = with pkgs; [

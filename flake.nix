@@ -4,9 +4,9 @@
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    ngrok = {
-      url = "github:ngrok/ngrok-nix";
-    };
+    # ngrok = {
+    #   url = "github:ngrok/ngrok-nix";
+    # };
   };
 
   outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:
