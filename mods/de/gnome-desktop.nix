@@ -19,6 +19,7 @@
             gnomeExtensions.compiz-alike-magic-lamp-effect
             gnomeExtensions.blur-my-shell
             feh
+            gnomeExtensions.caffeine
             gnome47Extensions."dash-to-dock@micxgx.gmail.com"
             gnomeExtensions.coverflow-alt-tab
             gnomeExtensions.gnome-bedtime
