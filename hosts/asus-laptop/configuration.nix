@@ -19,7 +19,7 @@
   # empty /tmp
   boot.tmp.cleanOnBoot = true;
 
-  networking.hostName = "laptop"; # Define your hostname.
+  networking.hostName = "asus-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking

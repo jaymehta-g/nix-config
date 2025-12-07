@@ -31,11 +31,11 @@
         ];
       };
 
-      laptop = nixpkgs.lib.nixosSystem rec {
+      asus-laptop = nixpkgs.lib.nixosSystem rec {
         inherit system;
         specialArgs = { inherit unstable inputs; };
         modules = [
-          ./hosts/laptop/configuration.nix
+          ./hosts/asus-laptop/configuration.nix
           custom-modules
         ];
       };
