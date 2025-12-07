@@ -2,6 +2,7 @@
 {
     imports = [
         ./neovim.nix
+        ./python.nix
     ];
 
     options = {
@@ -12,15 +13,11 @@
     config = lib.mkIf config.development.enable {
         environment.systemPackages = with pkgs; [
             unstable.vscode
-            python3
-            python313Packages.numpy
-            python313Packages.pyzmq
             unstable.cargo
             unstable.rustc
             unstable.rustup
             unstable.go
             burpsuite
-            python313Packages.pip
             gcc
             unstable.godot_4
             sl
