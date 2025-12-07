@@ -160,7 +160,7 @@
     rclone
     xed-editor
     zenity
-    zoom-us
+    unstable.zoom-us
     xdg-desktop-portal
     qbittorrent
     r2modman
