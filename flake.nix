@@ -39,6 +39,15 @@
           custom-modules
         ];
       };
+
+      lenovo = nixpkgs.lib.nixosSystem rec {
+        inherit system;
+        specialArgs = { inherit unstable inputs; };
+        modules = [
+          ./hosts/lenovo/configuration.nix
+          custom-modules
+        ];
+      };
     };
   };
 }
