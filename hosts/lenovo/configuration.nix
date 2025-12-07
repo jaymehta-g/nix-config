@@ -157,11 +157,7 @@
     zenity
     zoom-us
     xdg-desktop-portal
-#    (retroarch.override {
-#      cores = with libretro; [
-        #snes9x
-      #];
-    #})
+    powertop
     xclip
     anki
   ]; 
