@@ -10,6 +10,8 @@
             enable = true;
             ports = [1234];
             settings = {
+                PasswordAuthentication = false;
+                KbdInteractiveAuthentication = false;
                 PermitRootLogin = "no";
                 AllowUsers = ["jay"];
             };
