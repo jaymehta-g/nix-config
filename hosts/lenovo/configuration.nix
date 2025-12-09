@@ -140,7 +140,6 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.battery-consumption-watt-meter
     gitg
     gh
     gnumake
