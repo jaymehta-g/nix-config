@@ -13,9 +13,9 @@
     config = lib.mkIf config.development.enable {
         environment.systemPackages = with pkgs; [
             unstable.vscode
-            unstable.cargo
-            unstable.rustc
-            unstable.rustup
+            cargo
+            rustc
+            rustup
             unstable.go
             burpsuite
             gcc

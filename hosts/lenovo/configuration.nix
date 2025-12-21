@@ -140,6 +140,7 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
+    gnomeExtensions.battery-drop-rate
     gitg
     gh
     gnumake
