@@ -176,6 +176,8 @@
   development.enable = true;
   neovim.enable = true;
 
+  ssh.enable = true;
+
   instant-messaging.enable = true;
 
   normcap.enable = true;
