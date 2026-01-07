@@ -186,6 +186,7 @@
   normcap.enable = true;
   custom-fonts.enable = true;
   virtualbox.enable = true;
+  virtualisation.docker.enable = true;
   ssh.enable = true;
   gnome-rdp.enable = true;
 
