@@ -117,6 +117,39 @@
           "node.latency" = qr;
         };
       };
+    # virtual mic
+    pipewire."99-virtual-mic.conf" = {
+      "context.objects" = [
+        # Null sink (Virtual-Mic-Sink)
+        {
+          factory = "adapter";
+          args = {
+            "factory.name" = "support.null-audio-sink";
+            "node.name" = "audiorelay-virtual-mic-sink";
+            "node.description" = "Virtual-Mic-Sink";
+            "media.class" = "Audio/Sink";
+            "audio.position" = [ "FL" "FR" ];
+          };
+        }
+
+        # Remapped source (Virtual Mic)
+        {
+          factory = "adapter";
+          args = {
+            "factory.name" = "support.remap";
+            "node.name" = "audiorelay-virtual-mic-sink";
+            "node.description" = "Virtual-Mic";
+            "media.class" = "Audio/Source";
+            "audio.position" = [ "FL" "FR" ];
+            "monitor.channel-volumes" = true;
+            "monitor.passthrough" = true;
+            "capture.props" = {
+              "node.target" = "audiorelay-virtual-mic-sink";
+            };
+          };
+        }
+      ];
+    };
   };
 
   # windows time desync fix
