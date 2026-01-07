@@ -150,7 +150,13 @@
     # TODO move these to their own modules eventually:
     p7zip
     ffmpeg_7
-    unstable.obs-studio
+    (pkgs.wrapOBS {
+       plugins = with pkgs.obs-studio-plugins; [
+         droidcam-obs
+         obs-backgroundremoval
+         obs-composite-blur
+       ];
+     })
     protonvpn-gui
     vlc
     spotify
