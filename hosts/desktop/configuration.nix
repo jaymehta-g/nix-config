@@ -150,11 +150,6 @@
     # TODO move these to their own modules eventually:
     p7zip
     ffmpeg_7
-    (pkgs.wrapOBS {
-       plugins = with pkgs.obs-studio-plugins; [
-         droidcam-obs
-       ];
-     })
     protonvpn-gui
     vlc
     spotify
@@ -177,8 +172,16 @@
     anki
     tmux
     trashy
-    # obs virtual cam fix
   ]; 
+
+  # obs w droidcam
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      droidcam-obs
+    ];
+  };
 
   # tablet
   hardware.opentabletdriver.enable = true;
