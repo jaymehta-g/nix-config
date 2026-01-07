@@ -153,8 +153,6 @@
     (pkgs.wrapOBS {
        plugins = with pkgs.obs-studio-plugins; [
          droidcam-obs
-         obs-backgroundremoval
-         obs-composite-blur
        ];
      })
     protonvpn-gui
