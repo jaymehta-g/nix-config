@@ -165,6 +165,7 @@
     xclip
     steam-run
     anki
+    tmux
   ]; 
 
   # tablet
