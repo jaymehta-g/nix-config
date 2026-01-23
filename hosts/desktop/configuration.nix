@@ -211,7 +211,6 @@
     spotify
     gimp
     libreoffice-still
-    google-chrome
     rclone
     xed-editor
     zenity
