@@ -8,7 +8,7 @@
     config = lib.mkIf config.instant-messaging.enable {
         environment.systemPackages = with pkgs; [
           signal-desktop
-          discord
+          vesktop
           telegram-desktop
         ];
     };
