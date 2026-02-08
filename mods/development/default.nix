@@ -24,6 +24,7 @@
             starship
             tailscale
             xonsh
+            gnumake
         ];
 
         #services.tailscale.enable = true;
