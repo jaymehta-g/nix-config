@@ -258,8 +258,8 @@
   # gc
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 5d";
+    dates = "daily";
+    options = "--delete-older-than 1d";
   };
   boot.loader.systemd-boot.configurationLimit = 3;
 
