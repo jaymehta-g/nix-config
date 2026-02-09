@@ -161,6 +161,7 @@
     powertop
     xclip
     anki
+    trash-cli
   ]; 
 
   # tablet

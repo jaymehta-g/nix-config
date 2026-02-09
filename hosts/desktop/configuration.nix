@@ -226,7 +226,7 @@
     steam-run
     anki
     tmux
-    trashy
+    trash-cli
   ]; 
 
   # obs w droidcam
