@@ -9,10 +9,10 @@
         environment.systemPackages = [
             pkgs.xfce.thunar
             pkgs.xfce.xfconf
+            pkgs.xfce.thunar-media-tags-plugin
         ];
         services.dbus.packages = with pkgs; [
             xfce.xfconf
-            xfce.thunar-media-tags-plugin
         ];
     };
 }
