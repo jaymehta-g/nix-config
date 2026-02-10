@@ -6,13 +6,10 @@
     };
 
     config = lib.mkIf config.thunar-fm.enable {
-        environment.systemPackages = [
-            pkgs.xfce.thunar
-            pkgs.xfce.xfconf
-            pkgs.xfce.thunar-media-tags-plugin
-        ];
-        services.dbus.packages = with pkgs; [
-            xfce.xfconf
+        programs.thunar.enable = true;
+        programs.xfconf.enable = true;
+        programs.thunar.plugins = with pkgs.xfce; [
+            thunar-media-tags-plugin
         ];
     };
 }
