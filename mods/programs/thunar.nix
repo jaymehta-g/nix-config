@@ -12,6 +12,7 @@
         ];
         services.dbus.packages = with pkgs; [
             xfce.xfconf
+            xfce.thunar-media-tags-plugin
         ];
     };
 }
