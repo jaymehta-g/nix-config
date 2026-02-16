@@ -26,6 +26,7 @@
             xonsh
             gnumake
             docker
+            tmux
         ];
 
         #services.tailscale.enable = true;
