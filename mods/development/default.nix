@@ -25,6 +25,7 @@
             tailscale
             xonsh
             gnumake
+            docker
         ];
 
         #services.tailscale.enable = true;
