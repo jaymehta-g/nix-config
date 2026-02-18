@@ -20,13 +20,14 @@
             burpsuite
             gcc
             unstable.godot_4
-            sl
             starship
             tailscale
             xonsh
             gnumake
             docker
             tmux
+            dig
+            nodejs
         ];
 
         #services.tailscale.enable = true;
