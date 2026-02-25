@@ -26,6 +26,7 @@
             tmux
             dig
             nodejs
+            unstable.dumbpipe
         ];
 
         #services.tailscale.enable = true;
