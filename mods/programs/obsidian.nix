@@ -1,4 +1,4 @@
-{pkgs, lib, config, ...}:
+{pkgs, unstable, lib, config, ...}:
 {
     options = {
         obsidian.enable =
@@ -7,7 +7,7 @@
 
     config = lib.mkIf config.obsidian.enable {
         environment.systemPackages = with pkgs; [
-            obsidian
+            unstable.obsidian
         ];
 
         services.syncthing = 
