@@ -13,6 +13,7 @@
             karla
             atkinson-hyperlegible
             atkinson-monolegible
+            nerd-fonts.jetbrains-mono
         ];
         
     };

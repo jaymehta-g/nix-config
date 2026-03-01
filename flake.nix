@@ -4,10 +4,10 @@
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    # ngrok = {
-    #   url = "github:ngrok/ngrok-nix";
-    # };
-    
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:
