@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
+# https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:
   let
     system = "x86_64-linux";
