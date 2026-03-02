@@ -10,6 +10,7 @@
         programs.xfconf.enable = true;
         programs.thunar.plugins = with pkgs.xfce; [
             thunar-media-tags-plugin
+            tumbler
         ];
     };
 }
