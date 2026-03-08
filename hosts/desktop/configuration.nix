@@ -260,6 +260,7 @@
     automatic = true;
     dates = "daily";
     options = "--delete-older-than 1d";
+    persistent = true;
   };
   boot.loader.systemd-boot.configurationLimit = 3;
 
