@@ -7,5 +7,6 @@
     wget
     home-manager
     stow
+    unixtools.ifconfig
   ];
 }
