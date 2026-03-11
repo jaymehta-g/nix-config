@@ -23,6 +23,7 @@
             xonsh
             gnumake
             docker
+            podman
             tmux
             dig
             nodejs
