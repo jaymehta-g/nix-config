@@ -15,6 +15,8 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # Deep sleep
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
 
   # empty /tmp
   boot.tmp.cleanOnBoot = true;

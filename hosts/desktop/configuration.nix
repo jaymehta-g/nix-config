@@ -19,8 +19,6 @@
 	  efi.canTouchEfiVariables = true;
 	  timeout = 1;
   };
-  # Deep sleep
-  boot.kernelParams = [ "mem_sleep_default=deep" ];
 
   # OBS fix
   boot.extraModulePackages = with config.boot.kernelPackages; [
