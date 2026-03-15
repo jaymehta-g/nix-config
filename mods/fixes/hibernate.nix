@@ -8,7 +8,7 @@
     config = lib.mkIf config.hibernate.enable {
         swapDevices = [{
             device = "/swap";
-            size = 30*1024;  # MB
+            size = 16*1024;  # MB
             options = ["discard"];
         }];  
         boot.initrd.systemd.enable = true;
