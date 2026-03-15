@@ -158,6 +158,11 @@
     options = "--delete-older-than 7d";
     persistent = true;
   };
+  nix.optimise = {
+    automatic = true;
+    dates = "weekly";
+    persistent = true;
+  };
   boot.loader.systemd-boot.configurationLimit = 3;
 
   # This value determines the NixOS release from which the default
