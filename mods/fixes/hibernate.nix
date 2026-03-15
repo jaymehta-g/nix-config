@@ -11,5 +11,6 @@
             size = 30*1024;  # MB
             options = ["discard"];
         }];  
+        boot.initrd.systemd.enable = true;
     };
 }
