@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+  
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -18,6 +19,9 @@
 	  efi.canTouchEfiVariables = true;
 	  timeout = 1;
   };
+  # Deep sleep
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
+
   # OBS fix
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
