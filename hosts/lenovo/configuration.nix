@@ -18,6 +18,7 @@
 
   # Deep sleep
   hibernate.enable = true;
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
 
   # empty /tmp
   boot.tmp.cleanOnBoot = true;
@@ -103,7 +104,6 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.battery-drop-rate
     gitg
     gh
     gnumake
@@ -130,9 +130,6 @@
   # tablet
   hardware.opentabletdriver.enable = true;
 
-  # gaming.enable = true;
-  # gaming.minecraft.enable = true;
-
   development.enable = true;
   neovim.enable = true;
 
@@ -145,11 +142,6 @@
   custom-fonts.enable = true;
 
   obsidian.enable = true;
-
-  # virtualbox.enable = true;
-
-  # Rice
-  # grub-theme.enable = true;
 
   # gc
   nix.gc = {

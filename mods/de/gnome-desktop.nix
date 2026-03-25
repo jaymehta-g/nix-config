@@ -14,6 +14,7 @@
         environment.systemPackages = with pkgs; [
             bibata-cursors
             gnomeExtensions.panel-workspace-scroll
+            gnomeExtensions.battery-usage-wattmeter
             alacritty
             gnomeExtensions.compiz-windows-effect
             gnomeExtensions.compiz-alike-magic-lamp-effect
