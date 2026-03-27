@@ -8,6 +8,13 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 # https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, unstable, ... }:
+{ inputs, config, pkgs, unstable, system, ... }:
 
 {
   imports =
@@ -17,7 +17,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Deep sleep
-  hibernate.enable = true;
   boot.kernelParams = [ "mem_sleep_default=deep" ];
 
   # empty /tmp
@@ -104,6 +103,7 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
+    inputs.zen-browser.packages."x86_64-linux".default
     gitg
     gh
     gnumake
