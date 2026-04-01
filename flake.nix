@@ -15,6 +15,10 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 # https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:
