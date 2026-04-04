@@ -8,6 +8,6 @@
     home-manager
     stow
     unixtools.ifconfig
-    toybox
+    busybox
   ];
 }
