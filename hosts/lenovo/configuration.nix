@@ -143,6 +143,9 @@
 
   obsidian.enable = true;
 
+  # fixes
+  hibernate.enable = true;
+
   # gc
   nix.gc = {
     automatic = true;
