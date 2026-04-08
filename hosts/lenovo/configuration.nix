@@ -145,6 +145,11 @@
 
   # fixes
   hibernate.enable = true;
+  # hibernate lid switch and power key
+  services.logind.settings.Login = {
+    HandleLidSwitch = "hibernate";
+    HandlePowerKey = "hibernate";
+  };
 
   # gc
   nix.gc = {
