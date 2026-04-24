@@ -1,6 +1,6 @@
-{pkgs, lib, ...}:
+{ pkgs, lib, ... }:
 {
-    imports = [
-        ./hibernate.nix
-    ];
+  imports = [
+    ./hibernate.nix
+  ];
 }

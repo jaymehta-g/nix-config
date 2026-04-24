@@ -1,5 +1,5 @@
 # stuff that all hosts need
-{pkgs, lib, ...}:
+{ pkgs, lib, ... }:
 {
   environment.systemPackages = with pkgs; [
     vim

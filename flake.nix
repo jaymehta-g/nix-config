@@ -20,46 +20,48 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-# https://wiki.nixos.org/wiki/Flakes#Flake_schema
-  outputs = inputs@{nixpkgs, nixpkgs-unstable, ...}:
-  let
-    system = "x86_64-linux";
+  # https://wiki.nixos.org/wiki/Flakes#Flake_schema
+  outputs =
+    inputs@{ nixpkgs, nixpkgs-unstable, ... }:
+    let
+      system = "x86_64-linux";
 
-    unstable = import nixpkgs-unstable {
-      inherit system;
-      config.allowUnfree = true;
+      unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+      custom-modules = ./mods/default.nix;
+
+    in
+    {
+      nixosConfigurations = {
+        desktop = inputs.nixpkgs.lib.nixosSystem rec {
+          inherit system;
+          specialArgs = { inherit unstable inputs; };
+          modules = [
+            ./hosts/desktop/configuration.nix
+            custom-modules
+          ];
+        };
+
+        asus-laptop = nixpkgs.lib.nixosSystem rec {
+          inherit system;
+          specialArgs = { inherit unstable inputs; };
+          modules = [
+            ./hosts/asus-laptop/configuration.nix
+            custom-modules
+          ];
+        };
+
+        lenovo = nixpkgs.lib.nixosSystem rec {
+          inherit system;
+          specialArgs = { inherit unstable inputs; };
+          modules = [
+            ./hosts/lenovo/configuration.nix
+            custom-modules
+          ];
+        };
+      };
     };
-
-    custom-modules = ./mods/default.nix;
-
-  in {
-    nixosConfigurations = {
-      desktop = inputs.nixpkgs.lib.nixosSystem rec {
-        inherit system;
-        specialArgs = { inherit unstable inputs;};
-        modules = [
-          ./hosts/desktop/configuration.nix
-          custom-modules
-        ];
-      };
-
-      asus-laptop = nixpkgs.lib.nixosSystem rec {
-        inherit system;
-        specialArgs = { inherit unstable inputs; };
-        modules = [
-          ./hosts/asus-laptop/configuration.nix
-          custom-modules
-        ];
-      };
-
-      lenovo = nixpkgs.lib.nixosSystem rec {
-        inherit system;
-        specialArgs = { inherit unstable inputs; };
-        modules = [
-          ./hosts/lenovo/configuration.nix
-          custom-modules
-        ];
-      };
-    };
-  };
 }
