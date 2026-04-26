@@ -1,35 +1,40 @@
-{pkgs, unstable, lib, config, ...}:
 {
-    imports = [
-        ./neovim.nix
-        ./python.nix
+  pkgs,
+  unstable,
+  lib,
+  config,
+  ...
+}:
+{
+  imports = [
+    ./neovim.nix
+    ./python.nix
+  ];
+
+  options = {
+    development.enable = lib.mkEnableOption "enables";
+  };
+
+  config = lib.mkIf config.development.enable {
+    environment.systemPackages = with pkgs; [
+      unstable.vscode
+      rustup
+      unstable.go
+      burpsuite
+      gcc
+      unstable.godot_4
+      starship
+      tailscale
+      xonsh
+      gnumake
+      docker
+      podman
+      tmux
+      dig
+      nodejs
+      unstable.dumbpipe
     ];
 
-    options = {
-        development.enable =
-            lib.mkEnableOption "enables";
-    };
-
-    config = lib.mkIf config.development.enable {
-        environment.systemPackages = with pkgs; [
-            unstable.vscode
-            rustup
-            unstable.go
-            burpsuite
-            gcc
-            unstable.godot_4
-            starship
-            tailscale
-            xonsh
-            gnumake
-            docker
-            podman
-            tmux
-            dig
-            nodejs
-            unstable.dumbpipe
-        ];
-
-        #services.tailscale.enable = true;
-    };
+    #services.tailscale.enable = true;
+  };
 }

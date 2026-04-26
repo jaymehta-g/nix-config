@@ -1,15 +1,14 @@
-
-{pkgs, lib, ...}:
+{ pkgs, lib, ... }:
 {
-    imports = [
-        ./thunar.nix
-        ./normcap.nix
-        ./obsidian.nix
-        ./instant-messaging.nix
-        ./gaming.nix
-        ./mullvad.nix
-    ];
-    obsidian.enable = lib.mkDefault true;
-    thunar-fm.enable = lib.mkDefault true;
-    instant-messaging.enable = lib.mkDefault true;
+  imports = [
+    ./thunar.nix
+    ./normcap.nix
+    ./obsidian.nix
+    ./instant-messaging.nix
+    ./gaming.nix
+    ./mullvad.nix
+  ];
+  obsidian.enable = lib.mkDefault true;
+  thunar-fm.enable = lib.mkDefault true;
+  instant-messaging.enable = lib.mkDefault true;
 }

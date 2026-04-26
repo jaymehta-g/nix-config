@@ -2,15 +2,25 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, unstable, system, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  unstable,
+  system,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -56,7 +66,7 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  }; 
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -78,11 +88,16 @@
     pulse.enable = true;
   };
 
-  users.groups.nix-manager = {};
+  users.groups.nix-manager = { };
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" "nix-manager" "docker"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "nix-manager"
+      "docker"
+    ];
   };
 
   # Pick DE
@@ -98,7 +113,10 @@
   # Allow running executables
   programs.nix-ld = {
     enable = true;
-    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [pkgs.libGL pkgs.SDL2];
+    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [
+      pkgs.libGL
+      pkgs.SDL2
+    ];
   };
 
   # Install packages globally
@@ -125,7 +143,8 @@
     xclip
     anki
     trash-cli
-  ]; 
+    rustdesk
+  ];
 
   # tablet
   hardware.opentabletdriver.enable = true;

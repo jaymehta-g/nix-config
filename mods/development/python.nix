@@ -1,4 +1,10 @@
-{pkgs, unstable, lib, config, ...}:
+{
+  pkgs,
+  unstable,
+  lib,
+  config,
+  ...
+}:
 {
   environment.systemPackages = with pkgs; [
     python313

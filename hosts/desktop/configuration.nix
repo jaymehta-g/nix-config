@@ -2,22 +2,31 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, unstable, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  unstable,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-  
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Bootloader.
   boot.loader = {
-	  systemd-boot.enable = true;
-	  efi.canTouchEfiVariables = true;
-	  timeout = 1;
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    timeout = 1;
   };
 
   # OBS fix
@@ -63,7 +72,7 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  }; 
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -74,7 +83,6 @@
 
   # possible bluetooth driver fix
   hardware.enableAllFirmware = true;
-
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -97,7 +105,7 @@
       };
     };
     # for games apparently? from https://github.com/joinemm/empire/blob/master/modules/desktop/sound.nix#L23
-    pipewire-pulse."92-quantum" = 
+    pipewire-pulse."92-quantum" =
       let
         qr = "256/48000";
       in
@@ -166,7 +174,7 @@
       }
     ];
   };
-  
+
   # Mumble server.
   services.murmur = {
     enable = true;
@@ -178,13 +186,16 @@
 
   # windows time desync fix
   time.hardwareClockInLocalTime = true;
-  
 
-  users.groups.nix-manager = {};
+  users.groups.nix-manager = { };
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" "nix-manager" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "nix-manager"
+    ];
   };
 
   # Install firefox.
@@ -196,7 +207,10 @@
   # Allow running executables
   programs.nix-ld = {
     enable = true;
-    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [pkgs.libGL pkgs.SDL2];
+    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [
+      pkgs.libGL
+      pkgs.SDL2
+    ];
   };
 
   # Install packages globally
@@ -229,7 +243,8 @@
     anki
     tmux
     trash-cli
-  ]; 
+    rustdesk
+  ];
 
   # obs w droidcam
   programs.obs-studio = {

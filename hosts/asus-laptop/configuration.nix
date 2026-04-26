@@ -2,15 +2,24 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, unstable, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  unstable,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -54,7 +63,7 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  }; 
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -87,7 +96,7 @@
   #     };
   #   };
   #   # for games apparently? from https://github.com/joinemm/empire/blob/master/modules/desktop/sound.nix#L23
-  #   pipewire-pulse."92-quantum" = 
+  #   pipewire-pulse."92-quantum" =
   #     let
   #       qr = "256/48000";
   #     in
@@ -113,13 +122,16 @@
 
   # windows time desync fix
   # time.hardwareClockInLocalTime = true;
-  
 
-  users.groups.nix-manager = {};
+  users.groups.nix-manager = { };
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" "nix-manager" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "nix-manager"
+    ];
   };
 
   # Pick DE
@@ -135,7 +147,10 @@
   # Allow running executables
   programs.nix-ld = {
     enable = true;
-    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [pkgs.libGL pkgs.SDL2];
+    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [
+      pkgs.libGL
+      pkgs.SDL2
+    ];
   };
 
   # Install packages globally
@@ -157,16 +172,16 @@
     zenity
     zoom-us
     xdg-desktop-portal
-#    (retroarch.override {
-#      cores = with libretro; [
-        #snes9x
-      #];
+    #    (retroarch.override {
+    #      cores = with libretro; [
+    #snes9x
+    #];
     #})
     xclip
     steam-run
     anki
     tmux
-  ]; 
+  ];
 
   # tablet
   hardware.opentabletdriver.enable = true;
