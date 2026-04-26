@@ -10,6 +10,9 @@
   };
 
   config = lib.mkIf config.gnome-rdp.enable {
+    environment.systemPackages = with pkgs; [
+      gnome-remote-desktop
+    ];
     # # Remote desktop
     # services.xrdp.enable = true;
     # services.xrdp.defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
