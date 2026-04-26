@@ -143,6 +143,7 @@
     xclip
     anki
     trash-cli
+    rustdesk
   ];
 
   # tablet
