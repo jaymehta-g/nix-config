@@ -243,7 +243,6 @@
     anki
     tmux
     trash-cli
-    rustdesk
   ];
 
   # obs w droidcam
