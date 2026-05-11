@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 {
   inputs,
   config,
@@ -84,44 +80,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  # # popping and crackling fix
-  # services.pipewire.extraConfig = {
-  #   pipewire."92-low-latency" = {
-  #     "context.properties" = {
-  #       "default.clock.rate" = 48000;
-  #       "default.clock.quantum" = 2048;
-  #       "default.clock.min-quantum" = 2048;
-  #       "default.clock.max-quantum" = 2048;
-  #     };
-  #   };
-  #   # for games apparently? from https://github.com/joinemm/empire/blob/master/modules/desktop/sound.nix#L23
-  #   pipewire-pulse."92-quantum" =
-  #     let
-  #       qr = "256/48000";
-  #     in
-  #     {
-  #       "context.properties" = [
-  #         {
-  #           name = "libpipewire-module-protocol-pulse";
-  #           args = { };
-  #         }
-  #       ];
-  #       "pulse.properties" = {
-  #         "pulse.default.req" = qr;
-  #         "pulse.min.req" = qr;
-  #         "pulse.max.req" = qr;
-  #         "pulse.min.quantum" = qr;
-  #         "pulse.max.quantum" = qr;
-  #       };
-  #       "stream.properties" = {
-  #         "node.latency" = qr;
-  #       };
-  #     };
-  # };
-
-  # windows time desync fix
-  # time.hardwareClockInLocalTime = true;
 
   users.groups.nix-manager = { };
   users.users.jay = {
