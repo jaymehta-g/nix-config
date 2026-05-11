@@ -25,7 +25,7 @@
       unstable.godot_4
       starship
       tailscale
-      xonsh
+      unstable.xonsh
       gnumake
       docker
       podman
