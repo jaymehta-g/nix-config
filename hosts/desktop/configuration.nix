@@ -95,94 +95,9 @@
   };
 
   # popping and crackling fix
-  services.pipewire.extraConfig = {
-    pipewire."92-low-latency" = {
-      "context.properties" = {
-        "default.clock.rate" = 48000;
-        "default.clock.quantum" = 2048;
-        "default.clock.min-quantum" = 2048;
-        "default.clock.max-quantum" = 2048;
-      };
-    };
-    # for games apparently? from https://github.com/joinemm/empire/blob/master/modules/desktop/sound.nix#L23
-    pipewire-pulse."92-quantum" =
-      let
-        qr = "256/48000";
-      in
-      {
-        "context.properties" = [
-          {
-            name = "libpipewire-module-protocol-pulse";
-            args = { };
-          }
-        ];
-        "pulse.properties" = {
-          "pulse.default.req" = qr;
-          "pulse.min.req" = qr;
-          "pulse.max.req" = qr;
-          "pulse.min.quantum" = qr;
-          "pulse.max.quantum" = qr;
-        };
-        "stream.properties" = {
-          "node.latency" = qr;
-        };
-      };
-  };
+  audio-crackle-fix.enable = true;
 
-  #mumble
-  services.pipewire.extraConfig.pipewire."97-null-sink" = {
-    "context.objects" = [
-      {
-        factory = "adapter";
-        args = {
-          "factory.name" = "support.null-audio-sink";
-          "node.name" = "Null-Sink";
-          "node.description" = "Null Sink";
-          "media.class" = "Audio/Sink";
-          "audio.position" = "FL,FR";
-        };
-      }
-      {
-        factory = "adapter";
-        args = {
-          "factory.name" = "support.null-audio-sink";
-          "node.name" = "Null-Source";
-          "node.description" = "Null Source";
-          "media.class" = "Audio/Source";
-          "audio.position" = "FL,FR";
-        };
-      }
-    ];
-  };
-  services.pipewire.extraConfig.pipewire."98-virtual-mic" = {
-    "context.modules" = [
-      {
-        name = "libpipewire-module-loopback";
-        args = {
-          "audio.position" = "FL,FR";
-          "node.description" = "Mumble as Microphone";
-          "capture.props" = {
-            # Mumble's output node name.
-            "node.target" = "Mumble";
-            "node.passive" = true;
-          };
-          "playback.props" = {
-            "node.name" = "Virtual-Mumble-Microphone";
-            "media.class" = "Audio/Source";
-          };
-        };
-      }
-    ];
-  };
-
-  # Mumble server.
-  services.murmur = {
-    enable = true;
-    bandwidth = 540000;
-    bonjour = true;
-    password = "0";
-    autobanTime = 0;
-  };
+  mumble.enable = true;
 
   # windows time desync fix
   time.hardwareClockInLocalTime = true;
