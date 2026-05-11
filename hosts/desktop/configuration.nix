@@ -234,7 +234,6 @@
     xdg-desktop-portal
     qbittorrent
     r2modman
-    thunderbird
     gocryptfs
     xclip
     inkscape
