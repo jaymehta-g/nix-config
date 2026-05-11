@@ -244,15 +244,6 @@
     trash-cli
   ];
 
-  # obs w droidcam
-  programs.obs-studio = {
-    enable = true;
-    enableVirtualCamera = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      droidcam-obs
-    ];
-  };
-
   # tablet
   hardware.opentabletdriver.enable = true;
 
@@ -266,9 +257,6 @@
   virtualisation.docker.enable = true;
   ssh.enable = true;
   gnome-rdp.enable = true;
-
-  # Rice
-  # grub-theme.enable = true;
 
   # gc
   nix.gc = {
