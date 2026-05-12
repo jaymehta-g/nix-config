@@ -153,6 +153,7 @@
     anki
     tmux
     trash-cli
+    inputs.playit.packages."x86_64-linux".default
   ];
 
   # tablet

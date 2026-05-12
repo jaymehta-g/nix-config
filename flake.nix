@@ -19,6 +19,10 @@
       url = "github:nix-community/nixvim/nixos-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    playit = {
+      url = "github:pedorich-n/playit-nixos-module";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   # https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs =
