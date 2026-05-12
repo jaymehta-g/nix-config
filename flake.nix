@@ -21,7 +21,9 @@
     };
     playit = {
       url = "github:pedorich-n/playit-nixos-module";
-      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    flatpak = {
+      url = "github:gmodena/nix-flatpak/?ref=latest";
     };
   };
   # https://wiki.nixos.org/wiki/Flakes#Flake_schema

@@ -170,6 +170,9 @@
   ssh.enable = true;
   gnome-rdp.enable = true;
 
+  # surfshark
+  flatpak.enable = true;
+
   # gc
   nix.gc = {
     automatic = true;

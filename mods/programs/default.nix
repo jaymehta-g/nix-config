@@ -7,6 +7,7 @@
     ./instant-messaging.nix
     ./gaming.nix
     ./mullvad.nix
+    ./flatpak.nix
   ];
   obsidian.enable = lib.mkDefault true;
   thunar-fm.enable = lib.mkDefault true;
