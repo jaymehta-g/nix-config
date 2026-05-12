@@ -130,6 +130,7 @@
     zenity
     zoom-us
     xdg-desktop-portal
+    qbittorrent
     #    (retroarch.override {
     #      cores = with libretro; [
     #snes9x
@@ -162,6 +163,8 @@
 
   # virtualbox.enable = true;
 
+  # surfshark
+  flatpak.enable = true;
   # Rice
   # grub-theme.enable = true;
 
