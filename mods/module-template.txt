@@ -1,11 +1,14 @@
 {pkgs, lib, config, ...}:
+let
+    opt_name="NAME";
+in
 {
     options = {
-        NAME.enable =
+        "${opt_name}".enable =
             lib.mkEnableOption "enables";
     };
 
-    config = lib.mkIf config.NAME.enable {
+    config = lib.mkIf config."${opt_name}".enable {
         environment.systemPackages = [
 
         ];
