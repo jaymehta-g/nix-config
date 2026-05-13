@@ -27,9 +27,28 @@
     # Enable the GNOME RDP components
     services.gnome.gnome-remote-desktop.enable = true;
 
-    # Ensure the service starts automatically at boot so the settings panel appears
-    systemd.services.gnome-remote-desktop = {
-      wantedBy = [ "graphical.target" ];
+    systemd = {
+      services.gnome-remote-desktop = {
+        wantedBy = [ "graphical.target" ];
+      };
+      tmpfiles.settings."10-login-keyring" = {
+        "/user/jay/.local/share/keyrings/login.keyring" = {
+          f = {
+            user = "jay";
+            group = "users";
+            mode = "0600";
+            argument = /* ini */ ''
+              [keyring]
+              display-name=login
+              lock-on-idle=false
+              lock-after=false
+            '';
+          };
+        };
+      };
+      user.services.gnome-remote-desktop = {
+        wantedBy = [ "graphical.target" ];
+      };
     };
 
     # Open the default RDP port (3389)
