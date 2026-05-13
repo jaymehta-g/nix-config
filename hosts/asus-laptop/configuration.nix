@@ -140,6 +140,7 @@
     steam-run
     anki
     tmux
+    inputs.playit.packages."x86_64-linux".default
   ];
 
   # tablet
