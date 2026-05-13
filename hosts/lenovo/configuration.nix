@@ -139,7 +139,7 @@
     xclip
     anki
     trash-cli
-    rustdesk
+    qbittorrent
   ];
 
   # tablet
