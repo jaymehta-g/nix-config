@@ -158,6 +158,9 @@
 
   obsidian.enable = true;
 
+  # surfshark
+  flatpak.enable = true;
+
   # fixes
   # hibernate.enable = true;
 
