@@ -172,6 +172,8 @@
   # surfshark
   flatpak.enable = true;
 
+  niri.enable = true;
+
   # gc
   nix.gc = {
     automatic = true;

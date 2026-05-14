@@ -1,5 +1,6 @@
 {
   pkgs,
+  unstable,
   lib,
   config,
   ...
@@ -14,15 +15,12 @@ in
 
   config = lib.mkIf config."${opt_name}".enable {
     environment.systemPackages = with pkgs; [
-      wl-clipboard
+      unstable.noctalia-shell
+      alacritty
+      fuzzel
     ];
     # niri de
     gnome-desktop.enable = false;
     programs.niri.enable = true;
-    # services = {
-    #   xserver.enable = true;
-    #   displayManager.gdm.enable = true;
-    # };
-
   };
 }
