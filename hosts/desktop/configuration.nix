@@ -168,7 +168,6 @@
   virtualbox.enable = true;
   virtualisation.docker.enable = true;
   ssh.enable = true;
-  gnome-rdp.enable = true;
 
   # surfshark
   flatpak.enable = true;
