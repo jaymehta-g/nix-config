@@ -172,6 +172,8 @@
   # surfshark
   flatpak.enable = true;
 
+  sunshine.enable = true;
+
   # gc
   nix.gc = {
     automatic = true;
