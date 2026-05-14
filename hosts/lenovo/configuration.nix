@@ -161,6 +161,8 @@
   # surfshark
   flatpak.enable = true;
 
+  gaming.minecraft.enable = true;
+
   # fixes
   # hibernate.enable = true;
 
