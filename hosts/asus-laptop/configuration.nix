@@ -94,7 +94,7 @@
 
   # Pick DE
   # kde-plasma.enable = true;
-  gnome-desktop.enable = true;
+  niri.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
