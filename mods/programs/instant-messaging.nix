@@ -13,7 +13,7 @@
   config = lib.mkIf config.instant-messaging.enable {
     environment.systemPackages = with pkgs; [
       signal-desktop
-      unstable.vesktop
+      (vesktop.override { withSystemVencord = false; })
     ];
   };
 }
