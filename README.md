@@ -1,0 +1,1 @@
+My nix system config and dotfiles for my computer and two laptops. Using flakes, home-manager, stow
