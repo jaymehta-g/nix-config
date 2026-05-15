@@ -1,4 +1,10 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  system,
+  ...
+}:
 let
   terminal = "alacritty";
   term-run-cmd = terminal + " -e ";
@@ -7,6 +13,7 @@ in
   imports = [
     ./rclone.nix
     ./workflow
+    inputs.timewall.homeManagerModules.default
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -25,6 +32,11 @@ in
   gtk.iconTheme = {
     name = "Papirus-Dark";
     package = pkgs.papirus-icon-theme.override { color = "green"; };
+  };
+
+  services.timewall = {
+    enable = true;
+    wallpaperPath = "/home/jay/Pictures/Wallpapers/wallpaper.heic";
   };
 
   # The home.packages option allows you to install Nix packages into your
