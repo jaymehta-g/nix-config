@@ -27,9 +27,14 @@ def push():
 
 def rebuild():
 	if not autoformat(): return
+	echo "Applying system config..."
 	if ![sudo nixos-rebuild switch --log-format internal-json -v 2>&1 | sudo nom --json].returncode != 0:
 		echo "Error rebuilding"
-		notify-send -e "Rebuild Failed 💔💔💔"
+		notify-send -e "Rebuild Failed (system) 💔💔💔"
+		return
+	if ![home-manager switch].returncode != 0:
+		echo "Error with home-manager"
+		notify-send -e "Rebuild Failed (home-manager) 💔💔💔"
 		return
 	msg = ""
 	if pushafter:
@@ -50,12 +55,15 @@ while True:
 		code -n . ./hosts/@(name)/configuration.nix
 	if resp == 'u':
 		nix flake update
+		pushd ./dotfiles/.config/home-manager
+		nix flake update
+		popd
 	if resp == 'a' or resp == 'u':
 		rebuild()
 	if resp == 'p':
 		pushafter = (not pushafter)
 	if resp == 'd':
-		git diff
+		git diff --staged
 	if resp == 'f':
 		autoformat()
 
