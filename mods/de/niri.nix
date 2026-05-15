@@ -18,6 +18,7 @@ in
       unstable.noctalia-shell
       alacritty
       fuzzel
+      xwayland-satellite
     ];
     # niri de
     programs.niri.enable = true;
