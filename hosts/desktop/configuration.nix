@@ -169,6 +169,8 @@
   virtualisation.docker.enable = true;
   ssh.enable = true;
 
+  instant-messaging.enable = true;
+
   # surfshark
   flatpak.enable = true;
 

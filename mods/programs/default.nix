@@ -12,5 +12,4 @@
   ];
   obsidian.enable = lib.mkDefault true;
   thunar-fm.enable = lib.mkDefault true;
-  instant-messaging.enable = lib.mkDefault true;
 }

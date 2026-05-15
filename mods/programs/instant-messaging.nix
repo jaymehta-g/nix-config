@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  unstable,
   config,
   ...
 }:
@@ -12,7 +13,7 @@
   config = lib.mkIf config.instant-messaging.enable {
     environment.systemPackages = with pkgs; [
       signal-desktop
-      vesktop
+      unstable.vesktop
     ];
   };
 }
