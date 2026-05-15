@@ -5,7 +5,7 @@ pushafter = True
 
 if $(git status --porcelain).__len__() > 0:
 	echo "Tree dirty!"
-	git diff
+	git diff HEAD
 
 echo "trying to pull..."
 git pull --ff-only
@@ -63,7 +63,7 @@ while True:
 	if resp == 'p':
 		pushafter = (not pushafter)
 	if resp == 'd':
-		git diff --staged
+		git diff HEAD
 	if resp == 'f':
 		autoformat()
 
