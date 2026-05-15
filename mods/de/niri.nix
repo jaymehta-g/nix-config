@@ -23,5 +23,7 @@ in
     programs.niri.enable = true;
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
+
+    programs.xwayland.enable = true;
   };
 }
