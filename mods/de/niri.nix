@@ -20,7 +20,8 @@ in
       fuzzel
     ];
     # niri de
-    gnome-desktop.enable = false;
     programs.niri.enable = true;
+    services.power-profiles-daemon.enable = true;
+    services.upower.enable = true;
   };
 }
