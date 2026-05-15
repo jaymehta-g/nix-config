@@ -1,0 +1,13 @@
+#xclip
+alias clip='xsel --clipboard'
+
+# nix build
+alias buildpkg="cd \`mktemp -d\`; nix-build '<nixpkgs>' --attr "
+
+alias dl="trash -v"
+
+alias cdtmp="cd $(mktemp -d)"
+
+# tmux
+
+alias tma="tmux new -As "

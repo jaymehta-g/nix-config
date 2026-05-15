@@ -1,0 +1,62 @@
+#!/usr/bin/env xonsh
+
+pushd /etc/nixos
+pushafter = True
+
+if $(git status --porcelain).__len__() > 0:
+	echo "Tree dirty!"
+	git diff
+
+echo "trying to pull..."
+git pull --ff-only
+
+def autoformat():
+	echo "Formatting..."
+	if ![treefmt].returncode != 0:
+		echo "Formatting failed"
+		return False
+	return True
+
+def push():
+	gens = $(@lines nixos-rebuild list-generations)[1].split()
+	msg = f"❄️  {$(uname -n)} gen {gens[0]}, channel {gens[3]}"
+	git add .
+	git commit -a -m @(msg)
+	git push
+	return msg
+
+def rebuild():
+	if not autoformat(): return
+	if ![sudo nixos-rebuild switch --log-format internal-json -v 2>&1 | sudo nom --json].returncode != 0:
+		echo "Error rebuilding"
+		notify-send -e "Rebuild Failed 💔💔💔"
+		return
+	msg = ""
+	if pushafter:
+		msg = push()
+	notify-send -e "Nix Rebuild Ok 🤠" f"{msg}"
+	exit
+
+while True:
+	echo "e: Open Editor"
+	echo "f: Autoformat"
+	echo "d: Print Diff"
+	echo "a: Apply"
+	echo "u: Update and Apply"
+	echo @(f"p: Toggle Push (currently {pushafter})")
+	resp = input(">>> ").strip()
+	if resp == 'e':
+		name = $(hostname)
+		code -n . ./hosts/@(name)/configuration.nix
+	if resp == 'u':
+		nix flake update
+	if resp == 'a' or resp == 'u':
+		rebuild()
+	if resp == 'p':
+		pushafter = (not pushafter)
+	if resp == 'd':
+		git diff
+	if resp == 'f':
+		autoformat()
+
+popd
