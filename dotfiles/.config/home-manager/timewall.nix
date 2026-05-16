@@ -1,8 +1,11 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-
     inputs.timewall.homeManagerModules.default
+  ];
+
+  home.packages = [
+    pkgs.swww
   ];
 
   services.timewall = {
