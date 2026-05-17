@@ -109,6 +109,14 @@
     ];
   };
 
+  # Guest user
+  users.users.guest = {
+    home = "/tmp/guest";
+    createHome = true;
+    group = "users";
+    isSystemUser = true;
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 
