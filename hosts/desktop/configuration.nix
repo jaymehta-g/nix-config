@@ -113,7 +113,7 @@
   users.users.guest = {
     home = "/tmp/guest";
     isNormalUser = true;
-    hashedPassword = "";
+    password = "guest";
   };
 
   # Install firefox.
