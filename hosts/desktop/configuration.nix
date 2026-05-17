@@ -112,9 +112,7 @@
   # Guest user
   users.users.guest = {
     home = "/tmp/guest";
-    createHome = true;
-    group = "users";
-    isSystemUser = true;
+    isNormalUser = true;
   };
 
   # Install firefox.
