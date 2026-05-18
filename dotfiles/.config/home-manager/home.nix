@@ -3,6 +3,8 @@
   pkgs,
   inputs,
   system,
+  hostname,
+  lib,
   ...
 }:
 let
@@ -13,8 +15,8 @@ in
   imports = [
     ./rclone.nix
     ./workflow
-    ./timewall.nix
-  ];
+  ]
+  ++ lib.optional (hostname == "lenovo") ./timewall.nix;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jay";

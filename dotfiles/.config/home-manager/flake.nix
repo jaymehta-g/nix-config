@@ -21,7 +21,10 @@
     {
       homeConfigurations."jay" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs system; };
+        extraSpecialArgs = {
+          inherit inputs system;
+          hostname = builtins.getEnv "HOSTNAME";
+        };
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
