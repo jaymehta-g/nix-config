@@ -52,7 +52,7 @@ while True:
 	resp = input(">>> ").strip()
 	if resp == 'e':
 		name = $(hostname)
-		code -n . ./hosts/@(name)/configuration.nix
+		code -n . ./hosts/@(name)/configuration.nix ./dotfiles/.config/home-manager/home.nix
 	if resp == 'u':
 		nix flake update
 		pushd ./dotfiles/.config/home-manager

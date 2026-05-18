@@ -5,11 +5,22 @@
   ];
 
   home.packages = [
-    pkgs.swww
+    pkgs.awww
   ];
 
   services.timewall = {
     enable = true;
     wallpaperPath = "/home/jay/Pictures/Wallpapers/wallpaper.heic";
+    config = {
+      location = {
+        lat = 31.3;
+        lon = -99.9;
+      };
+      setter.command = [
+        "${pkgs.awww}/bin/awww"
+        "img"
+        "%f"
+      ];
+    };
   };
 }

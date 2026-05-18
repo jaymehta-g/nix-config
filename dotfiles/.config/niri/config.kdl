@@ -651,4 +651,4 @@ debug {
   honor-xdg-activation-with-invalid-serial
 }
 
-spawn-at-startup "swww-daemon"
+spawn-at-startup "awww-daemon"
