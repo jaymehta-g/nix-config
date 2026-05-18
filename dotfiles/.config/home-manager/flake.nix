@@ -19,19 +19,23 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      # hm will try to pick "user@hostname" and fallback to "user"
       homeConfigurations."jay" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
           inherit inputs system;
-          hostname = builtins.getEnv "HOSTNAME";
         };
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
         modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+      };
+      homeConfigurations."jay@lenovo" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          inherit inputs system;
+        };
+        modules = [
+          ./home.nix
+          ./hosts/lenovo.nix
+        ];
       };
     };
 }

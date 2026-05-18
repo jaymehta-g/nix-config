@@ -9,10 +9,6 @@
     inputs.timewall.homeManagerModules.default
   ];
 
-  home.packages = [
-    pkgs.awww
-  ];
-
   services.timewall = {
     enable = true;
     wallpaperPath = "/home/jay/Pictures/Wallpapers/wallpaper.heic";
@@ -22,8 +18,11 @@
         lon = -99.9;
       };
       setter.command = [
-        "${pkgs.awww}/bin/awww"
-        "img"
+        "noctalia-shell"
+        "ipc"
+        "call"
+        "wallpaper"
+        "set"
         "%f"
       ];
     };
