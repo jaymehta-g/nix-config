@@ -26,5 +26,19 @@ in
     services.upower.enable = true;
 
     programs.xwayland.enable = true;
+
+    # mod key overview
+    services.keyd = {
+      enable = true;
+      keyboards.default = {
+        ids = [ "*" ];
+        settings.global = {
+          overload_tap_timeout = 200; # Milliseconds to register a tap before timeout
+        };
+        settings.main = {
+          leftmeta = "overload(meta, macro(leftmeta+o))"; # Make left meta tap open overview keybind
+        };
+      };
+    };
   };
 }
