@@ -18,7 +18,7 @@
         lon = -99.9;
       };
       setter.command = [
-        "noctalia-shell"
+        "${pkgs.noctalia-shell}/bin/noctalia-shell"
         "ipc"
         "call"
         "wallpaper"
