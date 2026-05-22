@@ -168,6 +168,7 @@
   };
   # fixes
   # hibernate.enable = true;
+  programs.kdeconnect.enable = true;
 
   # gc
   nix.gc = {
