@@ -25,6 +25,7 @@
         "set"
         "%f"
       ];
+      setter.quiet = false;
     };
   };
 }
