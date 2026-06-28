@@ -143,6 +143,9 @@
     qbittorrent
   ];
 
+  # phone usb files
+  services.gvfs.enable = true;
+
   # tablet
   hardware.opentabletdriver.enable = true;
 
