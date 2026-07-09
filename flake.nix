@@ -25,6 +25,7 @@
     flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
+    pi.url = "github:lukasl-dev/pi.nix";
   };
   # https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs =

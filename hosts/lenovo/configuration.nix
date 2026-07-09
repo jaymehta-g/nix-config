@@ -11,6 +11,9 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
+    # Inputs modules
+    inputs.pi.nixosModules.default
   ];
   # Enable flakes
   nix.settings.experimental-features = [
@@ -172,6 +175,8 @@
   # fixes
   # hibernate.enable = true;
   programs.kdeconnect.enable = true;
+
+  programs.pi.coding-agent.enable = true;
 
   # gc
   nix.gc = {
