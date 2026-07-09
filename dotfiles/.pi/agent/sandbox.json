@@ -18,20 +18,14 @@
   },
   "filesystem": {
     "allowRead": [
-      ".",
-      "~/.config",
-      "~/.cargo",
-      "~/.local",
-      "~/.cache"
-    ],
-    "denyRead": [
-      "/home"
+      "/"
     ],
     "allowWrite": [
       ".",
       "/tmp",
       "~/.cache",
       "~/.rustup",
+      "~/.config",
       "~/.agent-browser"
     ],
     "denyWrite": [

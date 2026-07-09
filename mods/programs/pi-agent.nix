@@ -19,6 +19,8 @@ in
     programs.pi.coding-agent.enable = true;
     environment.systemPackages = [
       pkgs.bubblewrap
+      pkgs.socat
+      pkgs.ripgrep
     ];
   };
 }
