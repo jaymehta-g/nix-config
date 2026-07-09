@@ -13,7 +13,6 @@
     ./hardware-configuration.nix
 
     # Inputs modules
-    inputs.pi.nixosModules.default
   ];
   # Enable flakes
   nix.settings.experimental-features = [
@@ -176,7 +175,7 @@
   # hibernate.enable = true;
   programs.kdeconnect.enable = true;
 
-  programs.pi.coding-agent.enable = true;
+  pi-agent.enable = true;
 
   # gc
   nix.gc = {

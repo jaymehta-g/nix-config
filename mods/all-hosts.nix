@@ -5,6 +5,7 @@
     vim
     git
     wget
+    ripgrep
     home-manager
     stow
     unixtools.ifconfig
