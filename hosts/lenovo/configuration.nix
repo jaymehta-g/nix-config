@@ -11,8 +11,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-
-    # Inputs modules
   ];
   # Enable flakes
   nix.settings.experimental-features = [
@@ -120,7 +118,6 @@
 
   # Install packages globally
   environment.systemPackages = with pkgs; [
-    inputs.zen-browser.packages."x86_64-linux".default
     gitg
     gh
     gnumake
@@ -166,8 +163,7 @@
     };
     pi-agent.enable = true;
   };
-  # fixes
-  # mods.hibernate.enable = true;
+
   programs.kdeconnect.enable = true;
 
   # gc
