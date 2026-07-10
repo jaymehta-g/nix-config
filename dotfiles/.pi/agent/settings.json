@@ -1,9 +1,7 @@
 {
   "lastChangelogVersion": "0.80.5",
   "theme": "dark",
-  "packages": [
-    "npm:pi-sandbox"
-  ],
+  "packages": [],
   "defaultProvider": "mistral",
   "defaultModel": "devstral-medium-latest"
 }
