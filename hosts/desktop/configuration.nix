@@ -166,24 +166,21 @@
   # tablet
   hardware.opentabletdriver.enable = true;
 
-  mods.gaming = {
-    enable = true;
-    minecraft.enable = true;
+  mods = {
+    gaming = {
+      enable = true;
+      minecraft.enable = true;
+    };
+    development.enable = true;
+    neovim.enable = true;
+    normcap.enable = true;
+    custom-fonts.enable = true;
+    virtualbox.enable = true;
+    flatpak.enable = true; # surfshark
+    niri.enable = true;
+    ssh.enable = true;
+    instant-messaging.enable = true;
   };
-  mods.development.enable = true;
-  mods.neovim.enable = true;
-  mods.normcap.enable = true;
-  mods.custom-fonts.enable = true;
-  mods.virtualbox.enable = true;
-  virtualisation.docker.enable = true;
-  mods.ssh.enable = true;
-
-  mods.instant-messaging.enable = true;
-
-  # surfshark
-  mods.flatpak.enable = true;
-
-  mods.niri.enable = true;
 
   # gc
   nix.gc = {
