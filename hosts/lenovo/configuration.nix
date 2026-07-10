@@ -126,7 +126,6 @@
     p7zip
     ffmpeg_7
     obs-studio
-    protonvpn-gui
     vlc
     spotify
     gimp

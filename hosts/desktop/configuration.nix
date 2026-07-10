@@ -140,7 +140,6 @@
     # TODO move these to their own modules eventually:
     p7zip
     ffmpeg_7
-    protonvpn-gui
     vlc
     spotify
     gimp
