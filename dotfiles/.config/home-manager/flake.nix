@@ -9,7 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     timewall.url = "github:bcyran/timewall";
-    # awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 
   outputs =

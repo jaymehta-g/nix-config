@@ -49,7 +49,7 @@ in
       	      --bind ~/.pi/agent ~/.pi/agent \
       	      --tmpfs /run \
               --ro-bind /run/current-system /run/current-system \
-              -- pi
+              -- pi $@
     '';
     executable = true;
   };
