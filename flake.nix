@@ -10,6 +10,7 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim/nixos-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     playit = {
       url = "github:pedorich-n/playit-nixos-module";

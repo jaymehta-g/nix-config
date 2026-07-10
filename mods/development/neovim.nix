@@ -16,8 +16,8 @@ in
   };
 
   config = lib.mkIf config.mods.neovim.enable {
-    environment.systemPackages = with pkgs; [
-      (inputs.nixvim.legacyPackages."${pkgs.stdenv.hostPlatform.system}".makeNixvim nvim-conf)
-    ];
+    programs.neovim = {
+      enable = true;
+    };
   };
 }

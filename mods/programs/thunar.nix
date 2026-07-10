@@ -12,7 +12,7 @@
   config = lib.mkIf config.mods.thunar-fm.enable {
     programs.thunar.enable = true;
     programs.xfconf.enable = true;
-    programs.thunar.plugins = with pkgs.xfce; [
+    programs.thunar.plugins = with pkgs; [
       thunar-media-tags-plugin
       tumbler
     ];
