@@ -99,9 +99,9 @@
   };
 
   # Pick DE
-  # kde-plasma.enable = true;
-  # gnome-desktop.enable = true;
-  niri.enable = true;
+  # mods.kde-plasma.enable = true;
+  # mods.gnome-desktop.enable = true;
+  mods.niri.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -151,31 +151,24 @@
   # tablet
   hardware.opentabletdriver.enable = true;
 
-  development.enable = true;
-  neovim.enable = true;
-
-  ssh.enable = true;
-
-  instant-messaging.enable = true;
-
-  normcap.enable = true;
-
-  custom-fonts.enable = true;
-
-  obsidian.enable = true;
-
-  # surfshark
-  flatpak.enable = true;
-
-  gaming = {
-    enable = true;
-    minecraft.enable = true;
+  mods = {
+    development.enable = true;
+    neovim.enable = true;
+    ssh.enable = true;
+    instant-messaging.enable = true;
+    normcap.enable = true;
+    custom-fonts.enable = true;
+    obsidian.enable = true;
+    flatpak.enable = true; # surfshark
+    gaming = {
+      enable = true;
+      minecraft.enable = true;
+    };
+    pi-agent.enable = true;
   };
   # fixes
-  # hibernate.enable = true;
+  # mods.hibernate.enable = true;
   programs.kdeconnect.enable = true;
-
-  pi-agent.enable = true;
 
   # gc
   nix.gc = {

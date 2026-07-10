@@ -91,9 +91,9 @@
   };
 
   # popping and crackling fix
-  audio-crackle-fix.enable = true;
+  mods.audio-crackle-fix.enable = true;
 
-  mumble.enable = true;
+  mods.mumble.enable = true;
 
   # windows time desync fix
   time.hardwareClockInLocalTime = true;
@@ -166,22 +166,24 @@
   # tablet
   hardware.opentabletdriver.enable = true;
 
-  gaming.enable = true;
-  gaming.minecraft.enable = true;
-  development.enable = true;
-  neovim.enable = true;
-  normcap.enable = true;
-  custom-fonts.enable = true;
-  virtualbox.enable = true;
+  mods.gaming = {
+    enable = true;
+    minecraft.enable = true;
+  };
+  mods.development.enable = true;
+  mods.neovim.enable = true;
+  mods.normcap.enable = true;
+  mods.custom-fonts.enable = true;
+  mods.virtualbox.enable = true;
   virtualisation.docker.enable = true;
-  ssh.enable = true;
+  mods.ssh.enable = true;
 
-  instant-messaging.enable = true;
+  mods.instant-messaging.enable = true;
 
   # surfshark
-  flatpak.enable = true;
+  mods.flatpak.enable = true;
 
-  niri.enable = true;
+  mods.niri.enable = true;
 
   # gc
   nix.gc = {

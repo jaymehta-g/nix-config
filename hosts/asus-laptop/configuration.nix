@@ -93,8 +93,8 @@
   };
 
   # Pick DE
-  # kde-plasma.enable = true;
-  niri.enable = true;
+  # mods.kde-plasma.enable = true;
+  mods.niri.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -146,26 +146,28 @@
   # tablet
   hardware.opentabletdriver.enable = true;
 
-  # gaming.enable = true;
-  # gaming.minecraft.enable = true;
+  mods.gaming = {
+    enable = true;
+    minecraft.enable = true;
+  };
 
-  development.enable = true;
-  neovim.enable = true;
+  mods.development.enable = true;
+  mods.neovim.enable = true;
 
-  ssh.enable = true;
+  mods.ssh.enable = true;
 
-  instant-messaging.enable = true;
+  mods.instant-messaging.enable = true;
 
-  normcap.enable = true;
+  mods.normcap.enable = true;
 
-  custom-fonts.enable = true;
+  mods.custom-fonts.enable = true;
 
-  obsidian.enable = true;
+  mods.obsidian.enable = true;
 
-  # virtualbox.enable = true;
+  # mods.virtualbox.enable = true;
 
   # surfshark
-  flatpak.enable = true;
+  mods.flatpak.enable = true;
   # Rice
   # grub-theme.enable = true;
 

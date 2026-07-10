@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    audio-crackle-fix.enable = lib.mkEnableOption "enables";
+    mods.audio-crackle-fix.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.audio-crackle-fix.enable {
+  config = lib.mkIf config.mods.audio-crackle-fix.enable {
 
     services.pipewire.extraConfig = {
       pipewire."92-low-latency" = {

@@ -7,10 +7,10 @@
 }:
 {
   options = {
-    normcap.enable = lib.mkEnableOption "enables";
+    mods.normcap.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.normcap.enable {
+  config = lib.mkIf config.mods.normcap.enable {
     environment.systemPackages = [
       pkgs.normcap
       pkgs.xsel

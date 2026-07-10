@@ -8,7 +8,7 @@
 }:
 {
   options = {
-    ngrok.enable = lib.mkEnableOption "enables";
+    mods.ngrok.enable = lib.mkEnableOption "enables";
   };
 
   # imports = builtins.trace "inputs has ${builtins.toString (builtins.attrNames inputs.ngrok.nixosModules)}" [

@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    virtualbox.enable = lib.mkEnableOption "enables";
+    mods.virtualbox.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.virtualbox.enable {
+  config = lib.mkIf config.mods.virtualbox.enable {
     environment.systemPackages = [
 
     ];

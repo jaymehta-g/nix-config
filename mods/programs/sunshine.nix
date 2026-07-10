@@ -9,10 +9,10 @@ let
 in
 {
   options = {
-    "${opt_name}".enable = lib.mkEnableOption "enables";
+    mods."${opt_name}".enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config."${opt_name}".enable {
+  config = lib.mkIf config.mods."${opt_name}".enable {
     services.sunshine = {
       enable = true;
       autoStart = true;

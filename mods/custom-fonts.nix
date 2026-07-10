@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    custom-fonts.enable = lib.mkEnableOption "enables";
+    mods.custom-fonts.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.custom-fonts.enable {
+  config = lib.mkIf config.mods.custom-fonts.enable {
     fonts.packages = with pkgs; [
       fira-code
       nerd-fonts.fira-code

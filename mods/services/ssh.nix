@@ -7,11 +7,11 @@
 }:
 {
   options = {
-    ssh.enable = lib.mkEnableOption "enables";
-    ssh.dumbpipe.enable = lib.mkEnableOption "enables";
+    mods.ssh.enable = lib.mkEnableOption "enables";
+    mods.ssh.dumbpipe.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.ssh.enable {
+  config = lib.mkIf config.mods.ssh.enable {
     services.openssh = {
       enable = true;
       ports = [ 1234 ];
@@ -29,7 +29,7 @@
       openFirewall = true;
     };
   };
-  # // lib.mkIf config.ssh.dumbpipe.enable {
+  # // lib.mkIf config.mods.ssh.dumbpipe.enable {
   #     systemd.services.dumbpipe-ssh-tunnel = {
   #         wantedBy = [ "multi-user.target" ];
   #         after = [ "network.target" ];

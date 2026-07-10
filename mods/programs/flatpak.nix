@@ -11,10 +11,10 @@ in
 {
   imports = [ inputs.flatpak.nixosModules.nix-flatpak ];
   options = {
-    "${opt_name}".enable = lib.mkEnableOption "enables";
+    mods."${opt_name}".enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config."${opt_name}".enable {
+  config = lib.mkIf config.mods."${opt_name}".enable {
     services.flatpak.enable = true;
     services.flatpak.packages = [
       "com.surfshark.Surfshark"

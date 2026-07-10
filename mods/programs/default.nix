@@ -11,6 +11,6 @@
     ./sunshine.nix
     ./pi-agent.nix
   ];
-  obsidian.enable = lib.mkDefault true;
-  thunar-fm.enable = lib.mkDefault true;
+  mods.obsidian.enable = lib.mkDefault true;
+  mods.thunar-fm.enable = lib.mkDefault true;
 }

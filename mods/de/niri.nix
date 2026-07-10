@@ -10,10 +10,10 @@ let
 in
 {
   options = {
-    "${opt_name}".enable = lib.mkEnableOption "enables";
+    mods."${opt_name}".enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config."${opt_name}".enable {
+  config = lib.mkIf config.mods."${opt_name}".enable {
     environment.systemPackages = with pkgs; [
       unstable.noctalia-shell
       alacritty

@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    gnome-rdp.enable = lib.mkEnableOption "enables";
+    mods.gnome-rdp.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.gnome-rdp.enable {
+  config = lib.mkIf config.mods.gnome-rdp.enable {
     environment.systemPackages = with pkgs; [
       gnome-remote-desktop
     ];

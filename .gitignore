@@ -1,2 +1,14 @@
 rebuild-log.txt
 .vscode/
+.idea/
+.env
+.mcp.json
+.ripgreprc
+.bash_profile
+.bashrc
+.claude/
+.gitconfig
+.gitmodules
+.profile
+.zprofile
+.zshrc

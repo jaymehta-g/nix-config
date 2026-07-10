@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    gnome-desktop.enable = lib.mkEnableOption "enables";
+    mods.gnome-desktop.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.gnome-desktop.enable {
+  config = lib.mkIf config.mods.gnome-desktop.enable {
     services = {
       xserver.enable = true;
       displayManager.gdm.enable = true;

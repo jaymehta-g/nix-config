@@ -12,10 +12,10 @@ let
 in
 {
   options = {
-    neovim.enable = lib.mkEnableOption "enables";
+    mods.neovim.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.neovim.enable {
+  config = lib.mkIf config.mods.neovim.enable {
     environment.systemPackages = with pkgs; [
       (inputs.nixvim.legacyPackages."${pkgs.stdenv.hostPlatform.system}".makeNixvim nvim-conf)
     ];

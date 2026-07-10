@@ -7,10 +7,10 @@
 }:
 {
   options = {
-    instant-messaging.enable = lib.mkEnableOption "enables";
+    mods.instant-messaging.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.instant-messaging.enable {
+  config = lib.mkIf config.mods.instant-messaging.enable {
     environment.systemPackages = with pkgs; [
       signal-desktop
       (unstable.vesktop.override { withSystemVencord = false; })

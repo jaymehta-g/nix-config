@@ -7,10 +7,10 @@
 }:
 {
   options = {
-    obsidian.enable = lib.mkEnableOption "enables";
+    mods.obsidian.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.obsidian.enable {
+  config = lib.mkIf config.mods.obsidian.enable {
     environment.systemPackages = with pkgs; [
       unstable.obsidian
     ];

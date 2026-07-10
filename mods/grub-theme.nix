@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    grub-theme.enable = lib.mkEnableOption "enables";
+    mods.grub-theme.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.grub-theme.enable {
+  config = lib.mkIf config.mods.grub-theme.enable {
     boot.loader.grub.theme = pkgs.stdenv.mkDerivation {
       name = "elegant-grub-theme";
       src = pkgs.fetchFromGitHub {

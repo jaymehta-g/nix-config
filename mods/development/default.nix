@@ -12,10 +12,10 @@
   ];
 
   options = {
-    development.enable = lib.mkEnableOption "enables";
+    mods.development.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.development.enable {
+  config = lib.mkIf config.mods.development.enable {
     environment.systemPackages = with pkgs; [
       unstable.vscode
       rustup

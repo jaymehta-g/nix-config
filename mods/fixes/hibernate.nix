@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    hibernate.enable = lib.mkEnableOption "enables";
+    mods.hibernate.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.hibernate.enable {
+  config = lib.mkIf config.mods.hibernate.enable {
     swapDevices = [
       {
         device = "/swap";

@@ -6,10 +6,10 @@
 }:
 {
   options = {
-    mumble.enable = lib.mkEnableOption "enables";
+    mods.mumble.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.mumble.enable {
+  config = lib.mkIf config.mods.mumble.enable {
     services.pipewire.extraConfig.pipewire."97-null-sink" = {
       "context.objects" = [
         {
