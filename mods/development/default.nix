@@ -26,6 +26,7 @@
       unstable.godot_4
       starship
       tailscale
+      unstable.dumbpipe
       unstable.xonsh
       gnumake
       docker
@@ -33,7 +34,7 @@
       tmux
       dig
       nodejs
-      unstable.dumbpipe
+
     ];
 
     #services.tailscale.enable = true;

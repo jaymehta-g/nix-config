@@ -10,4 +10,4 @@ Under mods/ are modules that get imported into all hosts' config, and can be ena
 
 Do not make changes the user didn't ask for without explicitly asking first
 
-After making changes to nixos system config, use `nixos-rebuild dry-activate` to validate changes. (this will only validate the current system's config). Then autoformat with `nix shell nixpkgs#nixfmt-tree -c treefmt`
+After making changes to nixos system config, autoformat with `nix shell nixpkgs#nixfmt-tree -c treefmt`

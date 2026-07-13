@@ -174,7 +174,6 @@
     neovim.enable = true;
     normcap.enable = true;
     custom-fonts.enable = true;
-    virtualbox.enable = true;
     flatpak.enable = true; # surfshark
     niri.enable = true;
     ssh.enable = true;

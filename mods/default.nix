@@ -7,9 +7,6 @@
     ./services
     ./fixes
     ./custom-fonts.nix
-    ./grub-theme.nix
-    ./ipfs.nix
-    ./virtualbox.nix
   ];
   environment.systemPackages = with pkgs; [
     vim
