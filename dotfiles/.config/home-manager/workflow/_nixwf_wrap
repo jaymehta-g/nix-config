@@ -32,10 +32,13 @@ def rebuild():
 		echo "Error rebuilding"
 		notify-send -e "Rebuild Failed (system) 💔💔💔"
 		return
-	if ![home-manager switch].returncode != 0:
-		echo "Error with home-manager"
-		notify-send -e "Rebuild Failed (home-manager) 💔💔💔"
-		return
+	# Check if home-manager files have changed
+	hm_changed = $(git diff --name-only HEAD -- ./dotfiles/.config/home-manager/).strip() != ""
+	if hm_changed:
+		if ![home-manager switch].returncode != 0:
+			echo "Error with home-manager"
+			notify-send -e "Rebuild Failed (home-manager) 💔💔💔"
+			return
 	msg = ""
 	if pushafter:
 		msg = push()
