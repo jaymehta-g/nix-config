@@ -9,7 +9,6 @@
     ./mullvad.nix
     ./flatpak.nix
     ./sunshine.nix
-    ./pi-agent.nix
   ];
   mods.obsidian.enable = lib.mkDefault true;
   mods.thunar-fm.enable = lib.mkDefault true;

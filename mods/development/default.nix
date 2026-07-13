@@ -9,6 +9,7 @@
   imports = [
     ./neovim.nix
     ./python.nix
+    ./pi-agent.nix
   ];
 
   options = {
