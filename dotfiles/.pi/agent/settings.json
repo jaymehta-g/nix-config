@@ -4,6 +4,6 @@
   "packages": [
     "npm:pi-ask-user"
   ],
-  "defaultProvider": "mistral",
-  "defaultModel": "devstral-medium-latest"
+  "defaultProvider": "openrouter",
+  "defaultModel": "poolside/laguna-m.1:free"
 }

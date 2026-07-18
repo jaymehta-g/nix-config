@@ -30,6 +30,7 @@ in
             --bind ~/.cache ~/.cache \
             --bind ~/.local ~/.local \
         	  --bind ~/.pi/agent ~/.pi/agent \
+        	  --bind /etc/nixos /etc/nixos \
         	  --tmpfs /run \
             --ro-bind /run/current-system /run/current-system \
             -- ${pkgs.pi-coding-agent}/bin/pi $@
