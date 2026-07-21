@@ -135,7 +135,7 @@
     #snes9x
     #];
     #})
-    xclip
+    wl-clipboard
     steam-run
     anki
     tmux

@@ -152,7 +152,7 @@
     qbittorrent
     r2modman
     gocryptfs
-    xclip
+    wl-clipboard
     inkscape
     krita
     steam-run

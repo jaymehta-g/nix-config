@@ -131,11 +131,11 @@
     gimp
     libreoffice-still
     xed-editor
-    zenity
+    libnotify
     zoom-us
     xdg-desktop-portal
     powertop
-    xclip
+    wl-clipboard
     anki
     trash-cli
     qbittorrent
