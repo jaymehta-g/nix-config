@@ -161,6 +161,7 @@
       minecraft.enable = true;
     };
     pi-agent.enable = true;
+    virtualbox.enable = true;
   };
 
   programs.kdeconnect.enable = true;

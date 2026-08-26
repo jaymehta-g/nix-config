@@ -39,8 +39,8 @@ in
             -- ${pkgs.pi-coding-agent}/bin/pi $@
       '')
       (pkgs.writeShellScriptBin "pi-unsafe" ''
-          #!${pkgs.bash}/bin/bash
-            ${pkgs.pi-coding-agent}/bin/pi $@
+        #!${pkgs.bash}/bin/bash
+          ${pkgs.pi-coding-agent}/bin/pi $@
       '')
       pkgs.bubblewrap
     ];
