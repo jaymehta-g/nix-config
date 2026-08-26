@@ -10,4 +10,4 @@ Under `mods/` are modules that get imported into all hosts' config, and can be e
 
 Do not make changes the user didn't ask for without explicitly asking first
 
-After making changes tpi agent inline chato nixos system config, autoformat with `nix shell nixpkgs#nixfmt-tree -c treefmt` (no need to ask first)
+After making changes to nixos system config, autoformat with `nix shell nixpkgs#nixfmt-tree -c treefmt` (no need to ask first)

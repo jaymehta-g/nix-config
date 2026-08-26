@@ -30,12 +30,17 @@ in
             --bind ~/.cache ~/.cache \
             --bind ~/.local ~/.local \
         	  --bind ~/.pi/agent ~/.pi/agent \
+        	  --bind ~/.npm ~/.npm \
             --tmpfs ~/.ssh \
         	  --tmpfs /run \
             --ro-bind /run/current-system /run/current-system \
             --bind $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY "$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" \
             --bind $NIRI_SOCKET "$NIRI_SOCKET" \
             -- ${pkgs.pi-coding-agent}/bin/pi $@
+      '')
+      (pkgs.writeShellScriptBin "pi-unsafe" ''
+          #!${pkgs.bash}/bin/bash
+            ${pkgs.pi-coding-agent}/bin/pi $@
       '')
       pkgs.bubblewrap
     ];
