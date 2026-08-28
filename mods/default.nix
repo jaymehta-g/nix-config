@@ -18,4 +18,5 @@
     unixtools.ifconfig
     busybox
   ];
+  services.udisks2.enable = true;
 }
