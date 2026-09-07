@@ -31,10 +31,16 @@
   networking.hostName = "lenovo"; # Define your hostname.
 
   # Enable networking
-  networking.networkmanager.enable = true;
-
+  networking = {
+    networkmanager = {
+      enable = true;
+      dns = "none";
+    };
+    nameservers = ["9.9.9.9" "8.8.8.8"];
+    firewall.enable = false;
+  };
   # Disable firewall
-  networking.firewall.enable = false;
+
 
   # Set your time zone.
   services.automatic-timezoned.enable = true;
