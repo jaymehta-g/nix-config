@@ -136,12 +136,10 @@
     mumble
     gitg
     gh
-    nh
     # TODO move these to their own modules eventually:
     p7zip
     ffmpeg_7
     vlc
-    spotify
     gimp
     libreoffice-still
     rclone
@@ -160,6 +158,7 @@
     tmux
     trash-cli
     inputs.playit.packages."x86_64-linux".default
+    gnome-disk-utility
   ];
 
   # tablet
