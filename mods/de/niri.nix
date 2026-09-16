@@ -15,7 +15,7 @@ in
 
   config = lib.mkIf config.mods."${opt_name}".enable {
     environment.systemPackages = with pkgs; [
-      unstable.noctalia-shell
+      noctalia-shell
       alacritty
       fuzzel
       xwayland-satellite
