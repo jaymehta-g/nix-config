@@ -16,5 +16,6 @@
       thunar-media-tags-plugin
       tumbler
     ];
+    services.gvfs.enable = true;
   };
 }
