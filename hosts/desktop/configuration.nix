@@ -177,6 +177,8 @@
     niri.enable = true;
     ssh.enable = true;
     instant-messaging.enable = true;
+    pi-agent.enable = true;
+    virtualbox.enable = true;
   };
 
   # gc
