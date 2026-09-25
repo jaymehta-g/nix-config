@@ -145,6 +145,7 @@
     anki
     trash-cli
     qbittorrent
+    nushell
   ];
 
   # phone usb files
