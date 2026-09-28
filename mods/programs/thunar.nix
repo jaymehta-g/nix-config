@@ -15,6 +15,7 @@
     programs.thunar.plugins = with pkgs; [
       thunar-media-tags-plugin
       tumbler
+      thunar-volman
     ];
     services.gvfs.enable = true;
   };

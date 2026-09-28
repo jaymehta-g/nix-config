@@ -1,8 +1,4 @@
-A nixos system and home manager configuration repo.
-
-Under `dotfiles/` are dotfiles that are symlinked into ~ with stow.
-
-At `dotfiles/.config/home-manager` is nix home manager configuration.
+A nixos system configuration repo.
 
 Under `hosts/` are per-system configuration files. flake.nix loads these based on the current hostname. 
 
