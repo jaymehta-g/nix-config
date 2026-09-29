@@ -165,6 +165,8 @@
   # tablet
   hardware.opentabletdriver.enable = true;
 
+  programs.kdeconnect.enable = true;
+
   mods = {
     gaming = {
       enable = true;
