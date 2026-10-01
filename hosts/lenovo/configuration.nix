@@ -36,11 +36,13 @@
       enable = true;
       dns = "none";
     };
-    nameservers = ["9.9.9.9" "8.8.8.8"];
+    nameservers = [
+      "9.9.9.9"
+      "8.8.8.8"
+    ];
     firewall.enable = false;
   };
   # Disable firewall
-
 
   # Set your time zone.
   services.automatic-timezoned.enable = true;

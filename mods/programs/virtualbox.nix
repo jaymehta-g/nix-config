@@ -23,6 +23,6 @@
       };
     };
 
-    users.groups.vboxusers.members = ["jay"];
+    users.groups.vboxusers.members = [ "jay" ];
   };
 }
