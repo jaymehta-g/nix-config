@@ -171,6 +171,7 @@
     };
     pi-agent.enable = true;
     virtualbox.enable = true;
+    zerotier.enable = true;
   };
 
   programs.kdeconnect.enable = true;
