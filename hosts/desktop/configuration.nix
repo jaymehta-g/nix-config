@@ -182,6 +182,7 @@
     instant-messaging.enable = true;
     pi-agent.enable = true;
     virtualbox.enable = true;
+    zerotier.enable = true;
   };
 
   # gc

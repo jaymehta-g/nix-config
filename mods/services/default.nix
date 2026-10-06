@@ -2,5 +2,6 @@
 {
   imports = [
     ./ssh.nix
+    ./zerotier.nix
   ];
 }
