@@ -12,20 +12,10 @@
   };
 
   config = lib.mkIf config.mods.gaming.enable {
-    environment.systemPackages =
-      with pkgs;
-      [
-        everest-mons
-      ]
-      ++ (
-        if !config.mods.gaming.minecraft.enable then
-          [ ]
-        else
-          [
-            unstable.prismlauncher
-          ]
-      );
-
+    environment.systemPackages = with pkgs; [
+      unstable.prismlauncher
+      unstable.itch
+    ];
     programs.nix-ld.enable = true;
 
     programs.nix-ld.libraries = [ ];
