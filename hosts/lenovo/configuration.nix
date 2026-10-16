@@ -174,6 +174,8 @@
     zerotier.enable = true;
   };
 
+  programs.wireshark.enable = true;
+
   programs.kdeconnect.enable = true;
 
   # gc
