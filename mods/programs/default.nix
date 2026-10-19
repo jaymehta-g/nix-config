@@ -9,6 +9,7 @@
     ./mullvad.nix
     ./flatpak.nix
     ./virtualbox.nix
+    ./wireshark.nix
   ];
   mods.obsidian.enable = lib.mkDefault true;
   mods.thunar-fm.enable = lib.mkDefault true;

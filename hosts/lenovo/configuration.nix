@@ -23,7 +23,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Deep sleep
-  boot.kernelParams = [ "mem_sleep_default=deep" ];
+  boot.kernelParams = [ "mem_sleep_default=mem" ];
 
   # empty /tmp
   boot.tmp.cleanOnBoot = true;
@@ -171,12 +171,9 @@
     };
     pi-agent.enable = true;
     virtualbox.enable = true;
+    wireshark.enable = true;
     zerotier.enable = true;
   };
-
-  programs.wireshark.enable = true;
-
-  programs.kdeconnect.enable = true;
 
   # gc
   nix.gc = {
