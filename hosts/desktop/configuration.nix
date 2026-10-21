@@ -136,7 +136,6 @@
     mumble
     gitg
     gh
-    # TODO move these to their own modules eventually:
     p7zip
     ffmpeg_7
     vlc
@@ -148,10 +147,8 @@
     unstable.zoom-us
     xdg-desktop-portal
     qbittorrent
-    r2modman
     gocryptfs
     wl-clipboard
-    inkscape
     krita
     steam-run
     anki
