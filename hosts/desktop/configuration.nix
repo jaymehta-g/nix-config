@@ -180,6 +180,7 @@
     pi-agent.enable = true;
     virtualbox.enable = true;
     zerotier.enable = true;
+    wireshark.enable = true;
   };
 
   # gc
