@@ -16,6 +16,6 @@
       dumpcap.enable = true;
       usbmon.enable = true;
     };
-    users.users.jay.extraGroups = [ "wireshark" ];
+    users.groups.wireshark.members = [ "jay" ];
   };
 }
