@@ -176,7 +176,7 @@
     flatpak.enable = true; # surfshark
     niri.enable = true;
     ssh.enable = true;
-    instant-messaging.enable = true;
+    social.enable = true;
     pi-agent.enable = true;
     virtualbox.enable = true;
     zerotier.enable = true;

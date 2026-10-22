@@ -160,7 +160,7 @@
     development.enable = true;
     neovim.enable = true;
     ssh.enable = true;
-    instant-messaging.enable = true;
+    social.enable = true;
     normcap.enable = true;
     custom-fonts.enable = true;
     obsidian.enable = true;

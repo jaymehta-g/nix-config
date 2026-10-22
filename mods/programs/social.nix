@@ -7,10 +7,10 @@
 }:
 {
   options = {
-    mods.instant-messaging.enable = lib.mkEnableOption "enables";
+    mods.social.enable = lib.mkEnableOption "enables";
   };
 
-  config = lib.mkIf config.mods.instant-messaging.enable {
+  config = lib.mkIf config.mods.social.enable {
     environment.systemPackages = with pkgs; [
       signal-desktop
       (unstable.vesktop.override { withSystemVencord = false; })

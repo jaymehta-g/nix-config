@@ -4,7 +4,7 @@
     ./thunar.nix
     ./normcap.nix
     ./obsidian.nix
-    ./instant-messaging.nix
+    ./social.nix
     ./gaming.nix
     ./mullvad.nix
     ./flatpak.nix
