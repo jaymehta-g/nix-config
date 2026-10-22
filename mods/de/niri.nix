@@ -3,23 +3,28 @@
   unstable,
   lib,
   config,
+  inputs,
   ...
 }:
 let
   opt_name = "niri";
 in
 {
+  imports = [ inputs.noctalia-greeter.nixosModules.default ];
+
   options = {
     mods."${opt_name}".enable = lib.mkEnableOption "enables";
   };
 
   config = lib.mkIf config.mods."${opt_name}".enable {
+
     environment.systemPackages = with pkgs; [
       unstable.noctalia
       alacritty
       fuzzel
       xwayland-satellite
     ];
+
     # niri de
     programs.niri.enable = true;
     services.power-profiles-daemon.enable = true;
@@ -37,6 +42,18 @@ in
         };
         settings.main = {
           leftmeta = "overload(meta, macro(leftmeta+o))"; # Make left meta tap open overview keybind
+        };
+      };
+    };
+
+    # greeter
+    services.displayManager.noctalia-greeter = {
+      enable = true;
+      settings = {
+        cursor = {
+          theme = "Bibata-Modern-Ice";
+          size = 24;
+          path = pkgs.bibata-cursors;
         };
       };
     };

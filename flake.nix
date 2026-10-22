@@ -19,6 +19,10 @@
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
     pi.url = "github:lukasl-dev/pi.nix";
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   # https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs =
