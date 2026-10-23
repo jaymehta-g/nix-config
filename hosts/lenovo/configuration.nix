@@ -23,7 +23,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Deep sleep
-  boot.kernelParams = [ "mem_sleep_default=mem" ];
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
 
   # empty /tmp
   boot.tmp.cleanOnBoot = true;

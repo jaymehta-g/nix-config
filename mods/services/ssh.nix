@@ -23,11 +23,11 @@
       };
     };
 
-    services.endlessh = {
-      enable = true;
-      port = 22;
-      openFirewall = true;
-    };
+    # services.endlessh = {
+    #   enable = true;
+    #   port = 22;
+    #   openFirewall = true;
+    # };
   };
   # // lib.mkIf config.mods.ssh.dumbpipe.enable {
   #     systemd.services.dumbpipe-ssh-tunnel = {
