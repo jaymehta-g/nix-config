@@ -157,6 +157,7 @@
     inputs.playit.packages."x86_64-linux".default
     gnome-disk-utility
     nushell
+    pv
   ];
 
   # tablet
