@@ -148,6 +148,7 @@
     trash-cli
     qbittorrent
     nushell
+    pv
   ];
 
   # phone usb files
