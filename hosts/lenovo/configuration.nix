@@ -176,6 +176,7 @@
     wireshark.enable = true;
     zerotier.enable = true;
     # avahi.enable = true;
+    fish.enable = true;
   };
 
   # gc

@@ -14,8 +14,9 @@ in
 
   config = lib.mkIf config.mods."${opt_name}".enable {
     environment.systemPackages = [
-      pkgs.fish
     ];
+
+    programs.fish.enable = true;
 
     users.users.jay.shell = pkgs.fish;
   };

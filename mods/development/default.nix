@@ -10,6 +10,7 @@
     ./neovim.nix
     ./python.nix
     ./pi-agent.nix
+    ./fish-shell.nix
   ];
 
   options = {
