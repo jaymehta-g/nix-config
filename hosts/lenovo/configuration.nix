@@ -175,7 +175,7 @@
     virtualbox.enable = true;
     wireshark.enable = true;
     zerotier.enable = true;
-    avahi.enable = true;
+    # avahi.enable = true;
   };
 
   # gc
