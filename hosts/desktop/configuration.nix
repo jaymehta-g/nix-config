@@ -182,6 +182,7 @@
     virtualbox.enable = true;
     zerotier.enable = true;
     wireshark.enable = true;
+    fish.enable = true;
   };
 
   # gc
