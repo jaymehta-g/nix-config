@@ -17,9 +17,7 @@
         enableHardening = true;
       };
       guest = {
-        enable = true;
-        dragAndDrop = true;
-        clipboard = true;
+        enable = false;
       };
     };
 
