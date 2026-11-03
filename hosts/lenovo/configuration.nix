@@ -24,6 +24,7 @@
 
   # Deep sleep
   boot.kernelParams = [ "mem_sleep_default=deep" ];
+  powerManagement.enable = true;
 
   # empty /tmp
   boot.tmp.cleanOnBoot = true;
