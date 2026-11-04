@@ -12,7 +12,7 @@
 
   config = lib.mkIf config.mods.obsidian.enable {
     environment.systemPackages = with pkgs; [
-      unstable.obsidian
+      obsidian
     ];
 
     services.syncthing =
