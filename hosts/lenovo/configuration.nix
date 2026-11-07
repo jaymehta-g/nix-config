@@ -35,7 +35,7 @@
   networking = {
     networkmanager = {
       enable = true;
-      dns = "none";
+      # dns = "none";
     };
     nameservers = [
       "9.9.9.9"
@@ -43,7 +43,6 @@
     ];
     firewall.enable = false;
   };
-  # Disable firewall
 
   # Set your time zone.
   services.automatic-timezoned.enable = true;
@@ -174,7 +173,7 @@
     pi-agent.enable = true;
     virtualbox.enable = true;
     wireshark.enable = true;
-    zerotier.enable = true;
+    # zerotier.enable = true;
     # avahi.enable = true;
     fish.enable = true;
   };
