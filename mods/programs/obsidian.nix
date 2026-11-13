@@ -20,7 +20,7 @@
         user = "jay";
       in
       {
-        # enable = true;
+        enable = true;
         openDefaultPorts = true;
         inherit user;
         dataDir = "/home/${user}/Syncthing";
