@@ -33,6 +33,7 @@
 
   # Enable networking
   networking = {
+    resolvconf.enable = false;
     networkmanager = {
       enable = true;
       insertNameservers = [
