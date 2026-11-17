@@ -35,12 +35,11 @@
   networking = {
     networkmanager = {
       enable = true;
-      # dns = "none";
+      insertNameservers = [
+        "9.9.9.9"
+        "1.1.1.1"
+      ];
     };
-    nameservers = [
-      "9.9.9.9"
-      "8.8.8.8"
-    ];
     firewall.enable = false;
   };
 
