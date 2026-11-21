@@ -10,7 +10,10 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.globalprotect-openconnect.nixosModules.default
+
   ];
+  programs.globalprotect-openconnect.enable = true;
 
   # Enable flakes
   nix.settings.experimental-features = [
@@ -154,7 +157,6 @@
     anki
     tmux
     trash-cli
-    inputs.playit.packages."x86_64-linux".default
     gnome-disk-utility
     nushell
     pv

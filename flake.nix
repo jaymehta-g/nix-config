@@ -23,6 +23,7 @@
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    globalprotect-openconnect.url = "github:yuezk/GlobalProtect-openconnect";
   };
   # https://wiki.nixos.org/wiki/Flakes#Flake_schema
   outputs =
